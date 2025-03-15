@@ -1,6 +1,7 @@
 
 let sections = document.querySelectorAll('section');
 let NavLinks = document.querySelectorAll('header nav a');
+let lastScrollTop = 0;
 
 window.onscroll = () => {
     sections.forEach(sec => {
@@ -22,6 +23,21 @@ window.onscroll = () => {
         }
     });
 };
+
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", function () {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  if (scrollTop > lastScrollTop) {
+    navbar.style.top = "0"; // Hide navbar when scrolling down
+  } else {
+    navbar.style.top = "0"; // Show navbar when scrolling up
+  }
+  
+  lastScrollTop = scrollTop;
+})
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav_links');
