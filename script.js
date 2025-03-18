@@ -1,4 +1,3 @@
-
 let sections = document.querySelectorAll('section');
 let NavLinks = document.querySelectorAll('header nav a');
 let lastScrollTop = 0;
@@ -85,8 +84,7 @@ if (contactBtn) {
                 block: 'start'
             });
 
-            // Remove active class from all links
-            navLinks.forEach(link => link.classList.remove('active'));
+            
 
             // Add active class to Contact button
             contactBtn.classList.add('active');
@@ -135,3 +133,7 @@ if (menuToggle && navLinks) {
         navLinks.classList.toggle('active');
     });
 } 
+
+function resetForm() {
+    document.getElementById('contact-form').reset();
+  }
