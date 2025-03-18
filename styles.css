@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 html{
@@ -692,45 +691,45 @@ section {
     height: 300px;
     border-radius: 10px;
   }
-  .contact_us_green .submit-btn {
-    min-width: 290px;
-    height: 60px;
-    background-color: darkgreen;
-    font-size: 18px;
-    font-weight: 700;
-    color: white;
-    border-top-width: 2px;
-    border-right-width: 2px;
-    border-bottom-width: 2px;
-    border-left-width: 2px;
-    border-top-style: none;
-    border-right-style: none;
-    border-bottom-style: none;
-    border-left-style: none;
-    border-top-color: #767676;
-    border-right-color: #767676;
-    border-bottom-color: #767676;
-    border-left-color: #767676;
-    border-image-source: initial;
-    border-image-slice: initial;
-    border-image-width: initial;
-    border-image-outset: initial;
-    border-image-repeat: initial;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    margin-top: 42px;
-    margin-right: auto;
-    margin-bottom: 0px;
-    margin-left: auto;
-    cursor: pointer;
-  }
-  
   .contact_us_green .btn-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center align buttons */
+    gap: 20px; /* Space between buttons */
+    margin-top: 20px; /* Add space above buttons */
+   
   }
+
+ /* Common button styles */
+.contact_us_green .submit-btn,
+.contact_us_green .Reset-btn {
+  width: 290px; /* Fixed width */
+  height: 60px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+ /* Submit Button - Green */
+.contact_us_green .submit-btn {
+  background-color: #28a745; /* Green */
+}
+
+.contact_us_green .submit-btn:hover {
+  background-color: #218838; /* Darker Green on Hover */
+}
+
+/* Reset Button - Red */
+.contact_us_green .Reset-btn {
+  background-color: #dc3545; /* Red */
+  left: 100px;
+}
+
+.contact_us_green .Reset-btn:hover {
+  background-color: #c82333; /* Darker Red on Hover */
+}
   
   .contact_us_green .text-blk.input-title {
     font-size: 18px;
@@ -865,6 +864,8 @@ section {
     }
 }
 
+
+
   @media (max-width: 1024px) {
     .contact_us_green .responsive-container-block.container {
       justify-content: center;
@@ -915,6 +916,7 @@ section {
     .contact_us_green .text-content {
       display: none;
     }
+    
   
     .contact_us_green .input {
       width: 100%;
@@ -965,7 +967,17 @@ section {
       margin: 0 0 25px 0;
       
     }
+    .contact_us_green .btn-wrapper {
+      flex-direction: column; /* Stack buttons vertically on smaller screens */
+      gap: 15px; /* Reduce gap for small devices */
+      width: 100%;
   }
+  .contact_us_green .submit-btn,
+  .contact_us_green .Reset-btn {
+    width: 100%; /* Make buttons responsive */
+    min-width: unset;
+  }
+}
 *,
 *:before,
 *:after {
