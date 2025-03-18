@@ -61,11 +61,11 @@ li,a,button{
   transition: color 0.3s ease-in-out;
 }
 
-.navbar-nav .nav-link.active {
-  color: gray !important;
+.navbar-nav .nav-link.active, .nav-link:hover {
+  color: white !important;
 }
-.navbar-nav  .nav-link:hover{
-  color:white !important;
+.navbar-nav  {
+  color:gray !important;
 }
 
 .navbar-toggler {
@@ -1248,7 +1248,7 @@ body {
     background: darkgray;
 }
 ::-webkit-scrollbar-thumb{
-    
+    /*background: linear-gradient(transparent,red,yellow);*/
     background: black;
     border-radius: 10px;
 }
