@@ -4,24 +4,37 @@ let NavLinks = document.querySelectorAll('header nav a');
 let lastScrollTop = 0;
 
 window.onscroll = () => {
+    let sections = document.querySelectorAll('section');
+    let navLinks = document.querySelectorAll('.nav-link');
+
     sections.forEach(sec => {
         let top = window.scrollY;
         let offset = sec.offsetTop - 100;
-        let height = sec.offsetHeight ;
+        let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height){
-            NavLinks.forEach(links => {
-                links.classList.remove('Active');
-                document.querySelector('header nav a[href*='+id+']').classList.add('Active');
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
             });
-            sec.classList.add('show-animated');
 
-        }
-        else{
+            // Check if the element exists before adding active
+            let activeLink = document.querySelector('header nav a[href*="'+id+'"]');
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+            
+            sec.classList.add('show-animated');
+        } else {
             sec.classList.remove('show-animated');
         }
     });
+
+    // Special case: Handle scroll to top to highlight Home
+    if (window.scrollY === 0) {
+        navLinks.forEach(link => link.classList.remove('active'));
+        document.querySelector('header nav a[href*="Home"]').classList.add('active');
+    }
 };
 
 
