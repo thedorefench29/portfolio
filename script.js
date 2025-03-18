@@ -6,36 +6,86 @@ let lastScrollTop = 0;
 window.onscroll = () => {
     let sections = document.querySelectorAll('section');
     let navLinks = document.querySelectorAll('.nav-link');
+    let contactBtn = document.querySelector('.btn-primary'); // Contact button
 
+    // Check scroll position and add/remove active class dynamically
     sections.forEach(sec => {
         let top = window.scrollY;
-        let offset = sec.offsetTop - 102;
+        let offset = sec.offsetTop - 180; // Increased offset to handle larger screens
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
-
+    
         if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
             });
-
-            // Check if the element exists before adding active
-            let activeLink = document.querySelector('header nav a[href*="'+id+'"]');
+    
+            // Add active class to the matching nav link
+            let activeLink = document.querySelector('header nav a[href*="' + id + '"]');
             if (activeLink) {
                 activeLink.classList.add('active');
             }
-            
+    
             sec.classList.add('show-animated');
         } else {
             sec.classList.remove('show-animated');
         }
     });
 
-    // Special case: Handle scroll to top to highlight Home
+    // Special case: Handle Contact section separately
+    let contactSection = document.querySelector('#contact');
+    if (contactSection) {
+        let contactOffset = contactSection.offsetTop - 110; // Increase offset to fix larger screens
+        let contactHeight = contactSection.offsetHeight;
+    
+        if (window.scrollY >= contactOffset && window.scrollY < contactOffset + contactHeight) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            // Add active class for Contact button or link
+            let contactLink = document.querySelector('header nav a[href*="contact"]');
+            if (contactLink) {
+                contactLink.classList.add('active');
+            }
+    
+            contactSection.classList.add('show-animated');
+        } else {
+            contactSection.classList.remove('show-animated');
+        }
+    }
+
+    // Handle Home section active class when scrolling to top
     if (window.scrollY === 0) {
         navLinks.forEach(link => link.classList.remove('active'));
         document.querySelector('header nav a[href*="Home"]').classList.add('active');
     }
 };
+
+// Add smooth scroll for Contact button and add active class when clicked
+let contactBtn = document.querySelector('.btn-primary'); // Select the Contact button
+
+if (contactBtn) {
+    contactBtn.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent default link behavior
+        let contactSection = document.querySelector('#contact');
+
+        if (contactSection) {
+            contactSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+
+            // Remove active class from all links
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            // Add active class to Contact button
+            contactBtn.classList.add('active');
+
+            // Add animation to Contact section
+            contactSection.classList.add('show-animated');
+        }
+    });
+}
+
 
 
 const navbar = document.querySelector(".navbar");
