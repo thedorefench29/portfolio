@@ -150,8 +150,98 @@ body{
 .sidebar li:first-child {
   border-radius: 0px 5px 0px 0px;
 }
+/* Mobile Responsive */
+@media screen and (max-width: 1024px) {
+  .sidebar {
+    width: 35%;  /* Full width on mobile */
+    margin-left: -35%;
+    top: 40%;
+    transform: translate(0, 0);  /* Ensure the sidebar appears */
+    border-radius: 0;
+    position: fixed;
+  }
 
 
+  .sidebar li {
+    height: 60px;  /* Adjust height for mobile */
+    padding-left: 50px; /* Reduce padding */
+    
+  }
+
+  .sidebar a {
+    padding: 10px;  /* Adjust padding */
+  }
+
+  /* Optional: Show the sidebar with a more compact style on mobile */
+  .sidebar li:hover {
+    box-shadow: none;
+  }
+  
+  .sidebar:hover {
+    box-shadow: none;
+  }
+}
+@media screen and (max-width: 540px) {
+  .sidebar {
+    width: 50%;  /* Full width on mobile */
+    margin-left: -48%;
+    top: 40%;
+    transform: translate(0, 0);  /* Ensure the sidebar appears */
+    border-radius: 0;
+    position: fixed;
+  }
+
+  .sidebar li {
+    height: 60px;  /* Adjust height for mobile */
+    padding-left: 65px; /* Reduce padding */
+    
+  }
+
+  .sidebar a {
+    padding: 10px;  /* Adjust padding */
+  }
+
+  /* Optional: Show the sidebar with a more compact style on mobile */
+  .sidebar li:hover {
+    box-shadow: none;
+  }
+  
+  .sidebar:hover {
+    box-shadow: none;
+  }
+  
+}
+
+@media screen and (max-width: 375px), (max-width: 430px) {
+    .sidebar {
+      width: 60%;  /* Full width on mobile */
+      margin-left: -55%;
+      top: 40%;
+      transform: translate(0, 0);  /* Ensure the sidebar appears */
+      border-radius: 0;
+      position: fixed;
+    }
+  
+  
+    .sidebar li {
+      height: 60px;  /* Adjust height for mobile */
+      padding-left: 65px; /* Reduce padding */
+      
+    }
+  
+    .sidebar a {
+      padding: 10px;  /* Adjust padding */
+    }
+  
+    /* Optional: Show the sidebar with a more compact style on mobile */
+    .sidebar li:hover {
+      box-shadow: none;
+    }
+    
+    .sidebar:hover {
+      box-shadow: none;
+    }
+}
 
 
 /* Fade-Out Animation */
