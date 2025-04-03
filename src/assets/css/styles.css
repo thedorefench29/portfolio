@@ -54,8 +54,6 @@ body{
   left: -10%;
   width: 120%;
   height: 120%;
-  background: url('https://i.imgur.com/1t0vZDa.png'); /* Star texture */
-  background-size: cover;
   opacity: 0.6;
   mix-blend-mode: screen; /* Makes the stars blend naturally */
   animation: twinkle 3s infinite alternate;
@@ -93,11 +91,6 @@ body{
   border-radius: 0px 5px 5px 0px;
   overflow: hidden;
   width: 200px;
-  
-  /* Black background with stars */
-  background: black url('https://i.imgur.com/1t0vZDa.png'); /* Star texture */
-  background-size: cover;
-  animation: stars 60s linear infinite; /* Stars slowly move */
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 .sidebar li {
