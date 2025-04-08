@@ -1,4 +1,4 @@
-const form = document.getElementById("contact-form myForm");
+const form = document.getElementById("contact-form");
   const thankYouBox = document.getElementById("thankYouMessage");
 
   form.addEventListener("submit", function (event) {
