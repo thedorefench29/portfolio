@@ -22,18 +22,21 @@ html{
 
 html, body {
   overflow-x: hidden;
+ 
   touch-action: manipulation; 
   -webkit-overflow-scrolling: touch;
 }
 
 body{
     overflow-x: hidden;
+    
     background-color: #000000;
     color: white;
     opacity: 0;
     animation: fadeIn 0.3s ease-in forwards;
     /*padding-top: 70px;*/
 }
+
 
 .galaxy-text {
   position: relative;
@@ -255,9 +258,7 @@ body{
       border-radius: 0;
       position: fixed;
     }
-    .navbar {
-      display: none;
-    }
+    
   
     .sidebar li {
       height: 60px;  /* Adjust height for mobile */
@@ -550,56 +551,50 @@ display: block;
 margin: 20px auto; 
 padding: 10px 20px;
 font-size: 16px;
-background-color: gray;
 color: white;
 border: none;
 cursor: pointer;
 border-radius: 5px;
+background: linear-gradient(45deg, #1e3c72, #2a5298, #4a148c, #000000);
+background-size: 300% 300%;
+border: 2px solid #ffffff;
+cursor: pointer;
+transition: all 0.3s ease-in-out;
+animation: galaxyMove 6s infinite linear;
 }
 
+/* Hover Effect */
+.chat-btn:hover {
+background: linear-gradient(45deg, #4a148c, #2a5298, #1e3c72, #000000);
+color: cyan;
+transform: scale(1.1);
+box-shadow: 0 0 15px cyan;
+}
+
+/* Click Effect */
+.chat-btn:active {
+transform: scale(0.9);
+box-shadow: 0 0 25px white;
+}
+
+/* Galaxy Animation */
+@keyframes galaxyMove {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
 section .animate{
   opacity: 0;
   filter: blur(5px);
   transition: 1s;
 }
 
-section.show-animated .animate {
+section.show-animated {
   
   opacity: 1;
   filter: blur(0);
 
 }
-
-/* animation */
-.Project .animate{
-  transform: translateX(-100%);
-}
-.Project.show-animated .animate{
-  transform: translateX(0);
-}
-
-.Home .animate{
-  transform: translateX(-100%);
-}
-.Home.show-animated .animate{
-  transform: translateX(0);
-}
-
-
-.about .animate{
-  transform: translateX(100%);
-}
-.about.show-animated .animate{
-  transform: translateX(0);
-}
-.Certification .animate{
-  transform: scale(0.7);
-}
-.Certification.show-animated .animate{
-  transform: scale(1);
-}
-
-
 
 
 
@@ -735,16 +730,13 @@ section {
 }
 
 .blog-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 5em;
-  /*max-width: 1200px;*/
-  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 50px 0;
+  
 }
 
-.video-container {
+/*.video-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -756,7 +748,7 @@ section {
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-}
+}*/
 
 /*.video-box {
   width: 320px;
@@ -767,6 +759,7 @@ section {
 
 .blog-content {
   max-width: 600px;
+
 }
 
 .blog-content h2 {
@@ -781,8 +774,8 @@ section {
 }
 
 .blog-content p {
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 20px;
+  line-height: 1.3;
   margin-top: 10px;
   text-align: center;
   
@@ -1200,6 +1193,13 @@ section {
 
 }
 
+@media (max-width: 390px){
+  .navbar-toggler-icon{
+    height: auto;
+  }
+}
+
+
   @media (max-width: 430px) , (max-width: 768px)  , (max-width: 912px), (max-width: 1078px){
     body {
         font-size: 16px;
@@ -1276,11 +1276,16 @@ section {
         align-items: center;
         text-align: center;
     }
+.blog-container H2, p{
+  font-size: 18px;
+}
+.blog{
+  margin-top: 50px !important;
 
-    .video-container {
-        width: 100%;
-    }
-
+}
+.about{
+margin-top: 50px !important;
+}
     .chat-btn {
         width: 80%;
         font-size: 15px;
