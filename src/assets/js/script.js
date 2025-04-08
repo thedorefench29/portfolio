@@ -30,9 +30,12 @@
           }
         });
       
+        
         // Optional: if all fields filled, show thank you
         if (allFilled) {
-          thankYouBox.style.display = "block"; // make sure this is defined!
+          const firstName = document.getElementById("firstName").value.trim();
+          thankYouBox.textContent = `✅ Thank you, ${firstName}! Your message was received.`;
+          thankYouBox.style.display = "block";
         } else {
           thankYouBox.style.display = "none";
         }
@@ -53,5 +56,8 @@
         inputs.forEach(input => {
           input.classList.remove("error-border");
         });
+            
+        thankYouBox.style.display = "none";
+        thankYouBox.textContent = ""; // optional: clear the message
       }
 
