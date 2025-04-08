@@ -246,7 +246,7 @@ body{
   
 }
 
-@media screen and (max-width: 375px), (max-width: 430px) {
+@media screen and (max-width: 375px), (max-width: 430px){
     .sidebar {
       width: 60%;  /* Full width on mobile */
       margin-left: -55%;
@@ -255,7 +255,9 @@ body{
       border-radius: 0;
       position: fixed;
     }
-  
+    .navbar {
+      display: none;
+    }
   
     .sidebar li {
       height: 60px;  /* Adjust height for mobile */
@@ -276,7 +278,18 @@ body{
       box-shadow: none;
     }
 }
-@media screen and (max-width: 412px), (max-width: 424px){
+@media screen and (max-width: 900px){
+  .sidebar {
+    width: 30%; /* Full width on mobile */
+    margin-left: -30%;
+    top: 40%;
+    transform: translate(0, 0); /* Ensure the sidebar appears */
+    border-radius: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  }
+}
+@media screen and (max-width: 412px), (max-width: 430px){
   .sidebar {
     width: 55%; /* Full width on mobile */
     margin-left: -55%;
@@ -633,7 +646,7 @@ section.show-animated .animate {
 
 .about-img img{
   overflow: hidden;
-  height: 450px;
+  height: auto;
   
 }
 
@@ -645,7 +658,7 @@ section.show-animated .animate {
 }
 .about-content p{
     color: white;
-    font-size: 18px;
+    font-size: 28px;
     margin: 2em 0 3em;
 }
 
@@ -689,7 +702,7 @@ section.show-animated .animate {
   margin-bottom: 15px;
   font-size: 22px;
   font-family: 'Comic Sans MS', cursive;
-   margin-top: 30px;
+   margin-top: 20px;
 }
 
 .skills-category img {
@@ -727,7 +740,7 @@ section {
   justify-content: center;
   align-items: flex-start;
   gap: 5em;
-  max-width: 1200px;
+  /*max-width: 1200px;*/
   width: 100%;
 }
 
@@ -745,12 +758,12 @@ section {
   text-align: center;
 }
 
-.video-box {
+/*.video-box {
   width: 320px;
   height: 300px;
   border: 2px solid purple;
   background-color: white;
-}
+}*/
 
 .blog-content {
   max-width: 600px;
@@ -768,9 +781,11 @@ section {
 }
 
 .blog-content p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   margin-top: 10px;
+  text-align: center;
+  
 }
 
 
@@ -913,7 +928,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin-top: 0px;
+    margin-top: 50px;
     margin-right: auto;
     margin-bottom: 0px;
     margin-left: auto;
