@@ -37,6 +37,40 @@ body{
     /*padding-top: 70px;*/
 }
 
+/* Check */
+.thank-you-box {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  background-color: #d4edda;
+  color: #155724;
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  animation: fadeIn 0.7s ease-in-out;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.thank-you-box:hover {
+  transform: scale(1.05);
+  background-color: #c3e6cb;
+}
+
+/*error border */
+.error-border {
+  border: 2px solid #ff4d4d !important;
+  background-color: #ffe5e5 !important;
+}
+/*error message */
+.field-error {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 4px;
+  display: none;
+}
 
 .galaxy-text {
   position: relative;
