@@ -1,16 +1,3 @@
-const form = document.getElementById("contact-form");
-  const thankYouBox = document.getElementById("thankYouMessage");
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault(); // prevent actual submission
-    thankYouBox.style.display = "block";
-  });
-
-  function resetForm() {
-    form.reset();
-    thankYouBox.style.display = "none"; // hide message on reset
-  }
-
       const form = document.getElementById("contact-form");
       const thankYouBox = document.getElementById("thankYouMessage");
     
