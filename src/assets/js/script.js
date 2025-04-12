@@ -1,3 +1,33 @@
+function createStars(x, y) {
+  var arr = [1, 0.9, 0.8, 0.5, 0.2];
+
+  arr.forEach(function(i) {
+    var offset = (1 - i) * 75;
+    var star = document.createElement('div');
+
+    star.className = 'star';
+    star.style.top = y + Math.round(Math.random() * offset - offset / 2) + 'px';
+    star.style.left = x + Math.round(Math.random() * offset - offset / 2) + 'px';
+
+    document.body.appendChild(star);
+
+    setTimeout(function() {
+      document.body.removeChild(star);
+    }, Math.round(Math.random() * i * 600));
+  });
+}
+
+window.addEventListener('mousemove', function(e) {
+  createStars(e.clientX, e.clientY); // fixed here
+}, false);
+
+window.addEventListener('touchmove', function(e) {
+  if (e.touches.length > 0) {
+    var touch = e.touches[0];
+    createStars(touch.clientX, touch.clientY); // and fixed here
+  }
+}, false);
+
       const form = document.getElementById("contact-form");
       const thankYouBox = document.getElementById("thankYouMessage");
     
@@ -61,3 +91,5 @@
         thankYouBox.textContent = ""; // optional: clear the message
       }
 
+    
+      
