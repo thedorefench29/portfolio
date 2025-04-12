@@ -837,6 +837,9 @@ li,a,button{
 .nav-link {
   cursor: pointer;
 }
+.navbar-brand{
+ cursor: pointer;
+}	
 
 .navbar-nav .nav-link.active, .nav-link:hover {
   color: white !important;
