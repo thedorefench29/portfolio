@@ -8,9 +8,6 @@
        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="src/assets/css/styles.css" rel="stylesheet">
     <link rel="icon" href="src/assets/media/audrey/professional-portfolio_3476457.png" type="image/icon type">
-    <video autoplay loop muted playsinline id="background-video">
-        <source src="src/assets/media/audrey/videoplayback.mp4" type="video/mp4">
-    </video>
 </head>
 <body>
     <main>
@@ -20,13 +17,20 @@
         </div>
       </nav>
     </main>
-        <section class="intro show-animated">
+        <section class="intro show-animated starfield">
             <h1>Welcome to <span class="galaxy-text">My Portfolio</span></h1>
         </div>
         <button class="chat-btn_1" onclick="goToPage('src/Home.html')">Go to Home Page</button>
     </div>
-        </section>
-        
+    <script src="src/assets/js/starfield.js"></script>
+  <script>
+    Starfield.setup({
+      baseSpeed: 3,
+      maxAcceleration: 2,
+      accelerationRate: 0.05,
+      decelerationRate: 0.05,
+    });
+  </script>   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src/assets/js/script.js"></script>
     <script>
@@ -38,5 +42,6 @@
           }, 500); // Match animation duration (0.5s)
         }
       </script>
+      
 </body>
 </html>
