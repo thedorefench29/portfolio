@@ -779,6 +779,9 @@ li,a,button{
   flex-direction: column;
 }
 .chat-btn_1 {
+   user-select: none;        /* Standard */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;     /* IE/Edge */
   display: flex; 
   margin: 5px auto; 
   padding: 10px 20px;
