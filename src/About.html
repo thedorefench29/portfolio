@@ -10,12 +10,9 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" href="assets/media/audrey/professional-portfolio_3476457.png" type="image/icon type">
-
-    <video autoplay loop muted playsinline id="background-video">
-        <source src="assets/media/audrey/videoplayback.mp4" type="video/mp4">
-    </video>
 </head>
 <body>
+    <div id="particles-js"></div>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -45,7 +42,6 @@
         </div>
     </nav>
 </header>
-
 <section class="about" id="about">
     <div class="about-img">
         <img class="tilt-in-left-1" src="assets/media/audrey/091ff98d-513e-460e-862f-770c563192d8.jpg" alt="">
@@ -57,6 +53,10 @@
 </div>
 </section>
 
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS.load("particles-js", "assets/json/particlesjs-config.json");
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/script.js"></script>
 
