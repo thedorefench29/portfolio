@@ -782,6 +782,8 @@ li,a,button{
    user-select: none;        /* Standard */
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none;     /* IE/Edge */
+  -webkit-touch-callout: none;   /* Disable long press context menu on iOS */
+  -webkit-tap-highlight-color: transparent;  /* Remove tap highlight */
   display: flex; 
   margin: 5px auto; 
   padding: 10px 20px;
