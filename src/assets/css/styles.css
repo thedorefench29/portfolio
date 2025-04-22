@@ -10,15 +10,21 @@ html{
     padding: 0;
 }
 
-#background-video {
+#particles-js {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000000;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
   z-index: -1;
 }
+
+.starfield {
+  height: 100%;
+  width: 100%;
+}
+
 
 html, body {
   overflow-x: hidden;
@@ -859,8 +865,6 @@ li,a,button{
   filter: invert(1); 
 }
 
-
-
 /* Primary Button */
 .btn-primary {
   background-color: #007bff;
@@ -998,15 +1002,6 @@ section .animate{
   filter: blur(5px);
   transition: 1s;
 }
-
-section.show-animated {
-  
-  opacity: 1;
-  filter: blur(0);
-
-}
-
-
 
 
 /* home */
