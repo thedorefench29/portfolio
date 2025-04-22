@@ -10,10 +10,6 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" href="assets/media/audrey/professional-portfolio_3476457.png" type="image/icon type">
-
-    <video autoplay loop muted playsinline id="background-video">
-        <source src="assets/media/audrey/videoplayback.mp4" type="video/mp4">
-    </video>
 </head>
 <body>
     <header>
@@ -46,10 +42,8 @@
     </nav>
    
 </header>
-
-
-<section class="Home show-animated" id="Home">
-  
+<div id="particles-js"></div>
+<section class="Home" id="Home">
     <div class="home-content">
         <h3 class="line-1 anim-typewriter">Hi, I’m <span style="color: lightgreen;">Audrey Maven Concepcion</span></h3>
         <p></p>
@@ -69,9 +63,12 @@
     <div class="img-box flicker-in-1">
       <img src="assets/media/audrey/drey.jpg" alt="">
   </div>
-   
 </section>
     
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS.load("particles-js", "assets/json/particlesjs-config.json");
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/script.js"></script>
 <script>
