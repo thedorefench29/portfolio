@@ -107,8 +107,13 @@
       originX = getOriginX(origin, container);
       originY = getOriginY(origin, container);
 
+      // support for Mice
       origin.addEventListener("mouseenter", mouseEnterHandler);
       origin.addEventListener("mouseleave", mouseLeaveHandler);
+
+      // support for mobile touch
+      origin.addEventListener("touchstart", mouseEnterHandler);
+      origin.addEventListener("touchend", mouseLeaveHandler);
 
       window.addEventListener("resize", resizeHandler);
     } else {
