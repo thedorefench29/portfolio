@@ -827,6 +827,14 @@ li,a,button{
   text-align: center;
 }
 
+
+/*Navbar with index */
+
+.navbar-brand-1{
+  cursor: pointer;
+  font-size: 20px;
+ }
+
 /* navbar with Responsive*/
 
 /* Transparent Navbar */
