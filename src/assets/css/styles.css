@@ -1619,8 +1619,11 @@ section {
         font-size: 16px;
         overflow-x: hidden;
     }
-
-
+	  
+   .blog{
+        height: auto;
+    }
+	  
     .home-content h3 {
         font-size: 20px;
         text-align: center;
