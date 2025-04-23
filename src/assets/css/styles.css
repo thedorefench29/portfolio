@@ -1602,8 +1602,11 @@ section {
 }
 
 @media (max-width: 390px){
-  .navbar-toggler-icon{
+  /*.navbar-toggler-icon{
     height: auto;
+  }*/
+ .navbar-brand {
+    display: none;
   }
 }
 
