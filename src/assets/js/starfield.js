@@ -131,6 +131,31 @@
     requestAnimationFrame(draw);
   }
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const origin = document.querySelector(".chat-btn_1");
+
+    if (!origin) {
+      console.error("Button with class .chat-btn_1 not found.");
+      return;
+    }
+
+    function mouseEnterHandler() {
+      origin.classList.add("shake");
+    }
+
+    function mouseLeaveHandler() {
+      origin.classList.remove("shake");
+    }
+
+    origin.addEventListener("mouseenter", mouseEnterHandler);
+    origin.addEventListener("mouseleave", mouseLeaveHandler);
+
+    origin.addEventListener("touchstart", mouseEnterHandler);
+    origin.addEventListener("touchend", mouseLeaveHandler);
+
+    window.addEventListener("resize", resizeHandler);
+  });
+
   function windowResized(container, origin) {
     width = container.clientWidth;
     height = container.clientHeight;
