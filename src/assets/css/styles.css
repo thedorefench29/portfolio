@@ -127,6 +127,87 @@ body{
   animation: galaxyShift 5s infinite linear;
 }
 
+/*link*/
+.Youtube::after {
+  content: "YouTube";
+  position: absolute;
+  bottom: 125%; /* position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.Youtube:hover::after {
+  opacity: 1;
+}
+
+.Instagram::after {
+  content: "Instagram";
+  position: absolute;
+  bottom: 125%; /* position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.Instagram:hover::after {
+  opacity: 1;
+}
+
+.Github::after {
+  content: "Github";
+  position: absolute;
+  bottom: 125%; /* position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.Github:hover::after {
+  opacity: 1;
+}
+
+.Resume::after {
+  content: "Resume";
+  position: absolute;
+  bottom: 125%; /* position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.Resume:hover::after {
+  opacity: 1;
+}
+
 /* animation*/
 .anim{
   opacity: 0;
