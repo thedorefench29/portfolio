@@ -57,13 +57,13 @@ body{
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   animation: fadeIn 0.7s ease-in-out;
   transition: transform 0.3s;
-  cursor: pointer;
+   user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;   /* Disable long press context menu on iOS */
+  -webkit-tap-highlight-color: transparent;
 }
 
-.thank-you-box:hover {
-  transform: scale(1.05);
-  background-color: #c3e6cb;
-}
 
 /*error border */
 .error-border {
@@ -1149,26 +1149,6 @@ section {
   
 }
 
-/*.video-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.video-container h1 {
-  font-size: 48px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-}*/
-
-/*.video-box {
-  width: 320px;
-  height: 300px;
-  border: 2px solid purple;
-  background-color: white;
-}*/
 
 .blog-content {
   max-width: 600px;
