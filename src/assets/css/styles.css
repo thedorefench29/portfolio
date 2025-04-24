@@ -749,18 +749,6 @@ to{border-right-color: transparent;}
   animation: fadeOut 0.3s ease-out forwards;
 }
 
-/* Fade-In Keyframes */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* Fade-Out Keyframes */
-@keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-
 @keyframes hyperspace {
   0% {
     opacity: 1;
@@ -778,17 +766,16 @@ to{border-right-color: transparent;}
   animation: hyperspace 0.3s ease-out forwards;
 }
 
-
-@keyframes shake {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  50% { transform: translateX(5px); }
-  75% { transform: translateX(-5px); }
-  100% { transform: translateX(0); }
+/* Fade-In Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.shake {
-  animation: shake 0.2s ease-in-out infinite;
+/* Fade-Out Keyframes */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 li,a,button{
@@ -809,11 +796,9 @@ li,a,button{
   flex-direction: column;
 }
 .chat-btn_1 {
-   user-select: none;        /* Standard */
+  user-select: none;        /* Standard */
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none;     /* IE/Edge */
-  -webkit-touch-callout: none;   /* Disable long press context menu on iOS */
-  -webkit-tap-highlight-color: transparent;  /* Remove tap highlight */
   display: flex; 
   margin: 5px auto; 
   padding: 10px 20px;
@@ -857,6 +842,7 @@ li,a,button{
   text-align: center;
 }
 
+/* navbar with Responsive*/
 
 /*Navbar with index */
 
@@ -864,8 +850,6 @@ li,a,button{
   cursor: pointer;
   font-size: 20px;
  }
-
-/* navbar with Responsive*/
 
 /* Transparent Navbar */
 .navbar {
@@ -889,6 +873,8 @@ li,a,button{
 .navbar-brand{
  cursor: pointer;
 }	
+
+
 
 .navbar-nav .nav-link.active, .nav-link:hover {
   color: white !important;
@@ -1000,6 +986,18 @@ text-align: center;
 
 .home-content {
 text-align: center; 
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.2s ease-in-out infinite;
 }
 
 
@@ -1272,9 +1270,12 @@ section {
   .skills-category li {
     font-size: 20px;
   }
+
+  
 }
 
 @media (max-width: 768px) {
+  
   .skills-container {
     flex-direction: column;
     align-items: center;
@@ -1609,15 +1610,14 @@ section {
 }
 
 @media (max-width: 390px){
-  /*.navbar-toggler-icon{
-    height: auto;
-  }*/
- .navbar-brand {
+  .navbar-brand {
     display: none;
   }
-.blog{
+  
+  .blog{
     height: auto;
   }
+  
 }
 
 @media (max-width: 600px) {
@@ -1671,19 +1671,26 @@ height: auto;
     padding: 0 15px;
 }
 
+}
   @media (max-width: 430px) , (max-width: 768px)  , (max-width: 912px), (max-width: 1078px){
     body {
         font-size: 16px;
         overflow-x: hidden;
     }
-	  
-   .blog{
-        height: auto;
+
+    .blog{
+      height: auto;
     }
-	  
-    /*.home-content h3 {
+
+    /*.Home{
+      height: auto;
+    }
+
+    .home-content h3 {
         font-size: 20px;
         text-align: center;
+        height: auto;
+        width: auto;
     }
 
     .home-content h2 {
@@ -1696,7 +1703,7 @@ height: auto;
         font-size: 15px;
         text-align: center;
         padding: 0 10px;
-    }*/
+    } */
 
     .social-icons {
         display: flex;
@@ -1713,23 +1720,22 @@ height: auto;
         max-width: 250px;
         height: auto;
     }*/
-.about-img img{
+
+  .about-img img{
         width: 100%;
         max-width: 250px;
         height: auto;
     }
-    
-  .about-content{
-  height: auto;
-  }
-
     .about-content h2 {
         font-size: 22px;
         text-align: center;
     }
 
+  .about-content{
+  height: auto;
+  }
     .about-content p {
-        font-size: 15px;
+        font-size: 20px;
         text-align: justify;
         padding: 0 15px;
     }
@@ -1759,18 +1765,18 @@ height: auto;
         align-items: center;
         text-align: center;
     }
-.blog-container H2, p{
-  font-size: 18px;
-}
-.blog{
-  margin-top: 50px !important;
+  .blog-container H2, p{
+    font-size: 18px;
+  }
+  .blog{
+    margin-top: 50px !important;
 
-}
-.about{
-margin-top: 50px !important;
-}
-    
-}
+  }
+  .about{
+  margin-top: 50px !important;
+  }
+
+  }
 
 
 
@@ -1900,6 +1906,10 @@ margin-top: 50px !important;
       overflow-x: hidden;
   }
 
+  .Home{
+    height: auto;
+  }
+
   .home-content h3 {
       font-size: 18px;
       text-align: center;
@@ -1971,11 +1981,6 @@ margin-top: 50px !important;
       width: 100%;
   }
 
-  .chat-btn {
-      width: 80%;
-      font-size: 14px;
-      padding: 10px;
-  }
 }
 
 body {
