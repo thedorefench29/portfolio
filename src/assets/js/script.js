@@ -91,5 +91,18 @@ window.addEventListener('touchmove', function(e) {
         thankYouBox.textContent = ""; // optional: clear the message
       }
 
+ // This is any touchscreen with close navbar-toggler
+   document.addEventListener('click', function(event) {
+        const navbarCollapse = document.getElementById('navbarNav');
+        const navbarToggler = document.querySelector('.navbar-toggler');
+      
+        const isNavbarOpen = navbarToggler.getAttribute('aria-expanded') === 'true';
+        const clickedInsideNavbar = navbarCollapse.contains(event.target);
+        const clickedToggler = navbarToggler.contains(event.target);
+      
+        if (isNavbarOpen && !clickedInsideNavbar && !clickedToggler) {
+          navbarToggler.click();
+        }
+      });
     
       
