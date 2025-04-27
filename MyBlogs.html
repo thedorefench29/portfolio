@@ -72,6 +72,9 @@
 <script src="src/assets/js/script.js"></script>
 
 <script>
+     window.addEventListener('pageshow', function(event) {
+        document.body.classList.remove('fade-out');
+     });
     // Fade-out effect before navigating
     function goToPage(url) {
       document.body.classList.add("fade-out");
