@@ -61,6 +61,21 @@
 <script src="src/assets/js/script.js"></script>
 
 <script>
+    // This is Touchscreen with close navbar
+  document.addEventListener('click', function(event) {
+        const navbarCollapse = document.getElementById('navbarNav');
+        const navbarToggler = document.querySelector('.navbar-toggler');
+      
+        const isNavbarOpen = navbarToggler.getAttribute('aria-expanded') === 'true';
+        const clickedInsideNavbar = navbarCollapse.contains(event.target);
+        const clickedToggler = navbarToggler.contains(event.target);
+      
+        if (isNavbarOpen && !clickedInsideNavbar && !clickedToggler) {
+          navbarToggler.click();
+        }
+      });
+   
+    
      window.addEventListener('pageshow', function(event) {
         document.body.classList.remove('fade-out');
      });
