@@ -10,24 +10,21 @@
     <link rel="icon" href="src/assets/media/audrey/professional-portfolio_3476457.png" type="image/icon type">
 </head>
 <body>
+  
     <main>
-    <nav class="navbar navbar-dark bg-dark custom-navbar">
-        <div class="container-fluid">
-          <span class="navbar-brand-1 mb-0.8" 
-              style="font-weight: bold;
-              cursor: default;
-              user-select: none;
-              -webkit-user-select: none;
-              -ms-user-select: none;
-              -webkit-touch-callout: none;
-              -webkit-tap-highlight-color: transparent;">Audrey Maven Concepcion</span>
+     
+    <nav class="navbar">
+        <div class="container">
+          <img src="src/assets/media/audrey/Untitled design.png" class="navbar-brand-1">
         </div>
+        
       </nav>
     </main>
         <section class="intro show-animated starfield">
             <h1>Welcome to <span class="galaxy-text">My Portfolio</span></h1>
         </div>
-        <button class="chat-btn_1" onclick="goToPage('src/Home.html')">Go to Home Page</button>
+      
+        <button class="chat-btn_1" id="homeButton" onclick="goToPage('Home.html')">Go to Home Page</button>
     </div>
     <script src="src/assets/js/starfield.js"></script>
   <script>
@@ -38,10 +35,11 @@
       decelerationRate: 0.05,
     });
   </script>   
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src/assets/js/script.js"></script>
     <script>
-        // Fade-out effect before navigating
+        // hyperspace effect before navigating
         function goToPage(url) {
           document.body.classList.add("hyperspace");
           setTimeout(() => {
