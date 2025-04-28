@@ -1321,11 +1321,6 @@ section {
   
 }
 
-video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
 /* For PC to Mobile Responsiveness */
 @media(max-width: 1290px){
   .blog {
