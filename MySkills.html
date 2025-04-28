@@ -44,40 +44,41 @@
 </header>
 
 <section class="skills-section bounce-in-top starfield" id="MySkills">
-    <h1 class="skills-title ">My Skills</h1>
+    <h1 class="skills-title">My Skills</h1>
     <div class="skills-container">
         <div class="skills-category">
             <h2>Languages</h2>
             <ul>
-                <li>
+                <li class="skill-item">
                     <img src="src/assets/media/audrey/html-5_5968267.png" alt="HTML Icon">
                     <span>HTML</span>
                 </li>
-                <li>
-                    <img  src="src/assets/media/audrey/css_919826.png" alt="CSS Icon">
+                <li class="skill-item">
+                    <img src="src/assets/media/audrey/css_919826.png" alt="CSS Icon">
                     <span>CSS</span>
                 </li>
-                <li>
+                <li class="skill-item">
                     <img src="src/assets/media/audrey/js_5968292.png" alt="JavaScript Icon">
                     <span>JavaScript</span>
                 </li>
             </ul>
         </div>
         <div class="skills-category">
-            <h2  >Tools</h2>
+            <h2>Tools</h2>
             <ul>
-                <li>
-                    <img  src="src/assets/media/audrey/icons8-github-400.png" alt="GitHub Icon">
-                    <span >GitHub</span>
+                <li class="skill-item">
+                    <img src="src/assets/media/audrey/icons8-github-400.png"alt="GitHub Icon">
+                    <span>GitHub</span>
                 </li>
-                <li>
-                    <img  src="src/assets/media/audrey/icons8-visual-studio-code-2019-240.png" alt="VS Code Icon">
+                <li class="skill-item">
+                    <img src="src/assets/media/audrey/icons8-visual-studio-code-2019-240.png" alt="VS Code Icon">
                     <span>Vscode</span>
                 </li>
             </ul>
         </div>
     </div>
 </section>
+
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
@@ -87,8 +88,8 @@
 <script src="src/assets/js/script.js"></script>
 
 <script>
-    // This is Touchscreen with close navbar
-  document.addEventListener('click', function(event) {
+
+document.addEventListener('click', function(event) {
         const navbarCollapse = document.getElementById('navbarNav');
         const navbarToggler = document.querySelector('.navbar-toggler');
       
@@ -100,7 +101,8 @@
           navbarToggler.click();
         }
       });
-     window.addEventListener('pageshow', function(event) {
+   
+    window.addEventListener('pageshow', function(event) {
         document.body.classList.remove('fade-out');
      });
     // Fade-out effect before navigating
