@@ -1922,12 +1922,11 @@ video {
 
 }
 
-@media (max-width: 390px){
+/*@media (max-width: 390px){
   .navbar-brand {
     display: none;
   }
-  
-}
+}*/
 
 @media (max-width: 600px) {
    .Home{
