@@ -1608,6 +1608,13 @@ justify-content: center;
   position: relative;
   z-index: 5;
 }
+.contact-down{
+  font-size: 15px;
+  position: relative;
+  z-index: 6;
+  margin-bottom: 5%;
+}
+
 .container_5 {
   border-radius: 20px;
   padding: 30px;
@@ -1625,6 +1632,7 @@ justify-content: center;
   margin: 0 auto 20px auto;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   position: relative;
+  margin-bottom: 5%;
   z-index: 3;
 }
 
