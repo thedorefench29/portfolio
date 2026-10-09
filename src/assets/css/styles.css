@@ -18,24 +18,25 @@ html{
   top: 0;
   left: 0;
   z-index: -1;
- 
+  pointer-events: none;
 }
 
 /*new*/
 .certifications-section {
-    padding: 100px 5%;
+    padding: 80px 5% 120px;
     color: white;
     text-align: center;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .section-title {
     font-size: 48px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 40px;
     background: linear-gradient(45deg, #00ffe5, #b885ff, #007bff);
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -53,16 +54,18 @@ html{
 }
 
 .cert-grid {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    width: min(1100px, 100%);
+    margin: 0 auto;
+    padding-bottom: 30px;
+    align-items: start;
 }
 
 .cert-card {
-    
-    width: calc(33.333% - 20px); 
-    min-width: 300px; 
+    width: 100%;
+    min-width: 0;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     padding: 25px;
@@ -214,15 +217,14 @@ html{
         font-size: 36px;
     }
     .cert-grid {
-        
         grid-template-columns: 1fr;
     }
     .cert-card {
         padding: 20px;
         width: 100%;
     }
-    .modal{
-      padding-top: 250px;
+    .modal {
+        padding-top: 250px;
     }
 }
 /*    */
@@ -240,13 +242,15 @@ body.fade-out {
 
 html, body {
   overflow-x: hidden;
-  touch-action: manipulation; 
+  overflow-y: auto;
+  touch-action: pan-y;
   -webkit-overflow-scrolling: touch;
 }
 
 body{
     overflow-x: hidden;
-    
+    overflow-y: auto;
+    min-height: 100vh;
     background-color: #000000;
     color: white;
     opacity: 0;

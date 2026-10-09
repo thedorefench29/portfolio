@@ -44,6 +44,7 @@
 <section class="certifications-section starfield">
     <div class="container-certs">
         <h2 class="section-title">My Certifications</h2>
+
         <div class="cert-grid">
             <div class="cert-card anim">
                 <div class="cert-image-container">
@@ -54,16 +55,54 @@
                 <div class="cert-skills">
                     <span class="skill-tag">Database</span>
                 </div>
-                <button class="btn-cert" data-image-src="src/assets/media/audrey/certifications/Cert38485749606_page-0001.jpg">View Certificate</button>
+                <button class="btn-cert" type="button" data-image-src="src/assets/media/audrey/certifications/Cert38485749606_page-0001.jpg">View Certificate</button>
+            </div>
+
+            <div class="cert-card anim">
+                <div class="cert-image-container">
+                    <img src="src/assets/media/audrey/certifications/certificate cybersecurity.png" alt="Information Technology Specialist Certificate - Database" class="cert-image">
+                </div>
+                <h3 class="cert-title">Information Technology Specialist Certificate - Cybersecurity</h3>
+                <p class="cert-description">Validated knowledge of cybersecurity fundamentals, digital security, and best practices for protecting computer systems and information from potential threats.</p>
+                <div class="cert-skills">
+                    <span class="skill-tag">Cybersecurity</span>
+                </div>
+                <button class="btn-cert" type="button" data-image-src="src/assets/media/audrey/certifications/certificate cybersecurity.png">View Certificate</button>
+            </div>
+
+             <div class="cert-card anim">
+                <div class="cert-image-container">
+                    <img src="src/assets/media/audrey/certifications/certificate of html&css.png" alt="Information Technology Specialist Certificate - Database" class="cert-image">
+                </div>
+                <h3 class="cert-title">Information Technology Specialist – HTML and CSS</h3>
+                <p class="cert-description">Validated knowledge of HTML and CSS for creating, structuring, and styling web pages using essential front-end web development skills.</p>
+                <div class="cert-skills">
+                    <span class="skill-tag">HTML and CSS</span>
+                </div>
+                <button class="btn-cert" type="button" data-image-src="src/assets/media/audrey/certifications/certificate of html&css.png">View Certificate</button>
+            </div>
+
+
+            <div class="cert-card anim">
+                <div class="cert-image-container">
+                    <img src="src/assets/media/audrey/certifications/certificate of particate.png" alt="Information Technology Specialist Certificate - Database" class="cert-image">
+                </div>
+                <h3 class="cert-title">Certificate of Appreciation – Augmented Reality AI-Assisted Hairstyle Customization</h3>
+                <p class="cert-description">Recognized for successfully presenting research on AI-assisted hairstyle customization using augmented reality during the International Student Engagement and Exploration Program at Shenzhen City Polytechnic, China.</p>
+                <div class="cert-skills">
+                    <span class="skill-tag">Certificate of Appreciation</span>
+                </div>
+                <button class="btn-cert" type="button" data-image-src="src/assets/media/audrey/certifications/certificate of particate.png">View Certificate</button>
             </div>
 
         </div>
     </div>
 </section>
 
-<div id="certModal" class="modal">
-    <span class="close-btn" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="modalImage">
+
+<div id="certModal" class="modal" aria-hidden="true">
+    <span class="close-btn" id="closeCertModal" aria-label="Close certificate view" role="button" tabindex="0">&times;</span>
+    <img class="modal-content" id="modalImage" alt="Certificate preview">
 </div>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -102,13 +141,17 @@
     const modal = document.getElementById("certModal");
     const modalImage = document.getElementById("modalImage");
 
+    const closeButton = document.getElementById("closeCertModal");
+
     function openModal(imageUrl) {
         modal.style.display = "block";
+        modal.setAttribute("aria-hidden", "false");
         modalImage.src = imageUrl;
     }
 
     function closeModal() {
         modal.style.display = "none";
+        modal.setAttribute("aria-hidden", "true");
         modalImage.src = "";
     }
 
@@ -123,11 +166,25 @@
         });
     });
 
-    window.onclick = function(event) {
+    closeButton.addEventListener('click', closeModal);
+    closeButton.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            closeModal();
+        }
+    });
+
+    window.addEventListener('click', function(event) {
         if (event.target == modal) {
             closeModal();
         }
-    }
+    });
+
+    window.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.style.display === 'block') {
+            closeModal();
+        }
+    });
   </script>
 
 </body>
