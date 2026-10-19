@@ -113,6 +113,375 @@ html{
     align-items: start;
 }
 
+  .achievement-cert-grid {
+    max-width: 640px;
+    grid-template-columns: minmax(0, 1fr);
+    padding-bottom: 0;
+  }
+
+  .certifications-section.achievement-feature-section {
+    height: auto;
+    min-height: auto;
+    padding-bottom: 52px;
+  }
+
+  .mobility-experience {
+    padding: 112px 0 64px;
+    color: #eff5f8;
+  }
+
+  .mobility-experience.starfield {
+    height: auto;
+  }
+
+  .mobility-experience-inner {
+    display: grid;
+    width: min(1220px, calc(100% - 48px));
+    margin: 0 auto;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    align-items: center;
+    gap: 48px;
+  }
+
+  .mobility-story {
+    min-width: 0;
+  }
+
+  .mobility-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0 0 17px;
+    color: #8edee8;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .mobility-eyebrow span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #e2bd78;
+    box-shadow: 0 0 12px rgba(226, 189, 120, 0.45);
+  }
+
+  .mobility-story h1 {
+    margin: 0 0 17px;
+    color: #f4f7f8;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  .mobility-lede {
+    margin: 0 0 12px;
+    color: #e2bd78;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  .mobility-description,
+  .mobility-closing {
+    color: rgba(207, 219, 228, 0.82);
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .mobility-description {
+    margin: 0 0 22px;
+  }
+
+  .mobility-story h2 {
+    margin: 0 0 11px;
+    color: #eff5f8;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .mobility-highlights {
+    display: grid;
+    gap: 9px;
+    margin: 0 0 17px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .mobility-highlights li {
+    position: relative;
+    padding-left: 17px;
+    color: rgba(207, 219, 228, 0.82);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .mobility-highlights li::before {
+    position: absolute;
+    top: 0.55em;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #68c6d0;
+    content: '';
+  }
+
+  .mobility-closing {
+    margin: 0;
+    padding-top: 14px;
+    border-top: 1px solid rgba(127, 180, 204, 0.2);
+  }
+
+  .mobility-carousel {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(127, 180, 204, 0.25);
+    border-radius: 10px;
+    background: rgba(7, 13, 18, 0.9);
+    box-shadow: 0 22px 52px rgba(0, 0, 0, 0.3);
+  }
+
+  .mobility-carousel figure {
+    margin: 0;
+  }
+
+  .mobility-slide-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+
+  .mobility-carousel figcaption {
+    min-height: 44px;
+    padding: 13px 48px 12px;
+    color: rgba(227, 239, 243, 0.86);
+    font-size: 11px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .mobility-carousel .carousel-indicators {
+    top: auto;
+    bottom: 48px;
+    margin-bottom: 0;
+  }
+
+  .mobility-carousel .carousel-indicators button {
+    width: 7px;
+    height: 7px;
+    margin: 0 4px;
+    border: 0;
+    border-radius: 50%;
+  }
+
+  .mobility-carousel .carousel-control-prev,
+  .mobility-carousel .carousel-control-next {
+    bottom: 44px;
+    width: 42px;
+  }
+
+  .mobility-achievement {
+    width: min(640px, 100%);
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: 12px;
+  }
+
+  .mobility-achievement-title {
+    margin: 0 0 8px;
+    color: #eff5f8;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .mobility-achievement-subtitle {
+    margin: 0 0 18px;
+    color: rgba(169, 192, 207, 0.78);
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .achievement-modal-program {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 24px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid rgba(127, 180, 204, 0.2);
+  }
+
+  .achievement-modal-steps {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin: 0 0 18px;
+  }
+
+  .achievement-modal-step {
+    min-height: 40px;
+    border: 1px solid rgba(127, 180, 204, 0.24);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.04);
+    color: rgba(207, 219, 228, 0.78);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .achievement-modal-step.active {
+    border-color: rgba(104, 198, 208, 0.7);
+    background: rgba(104, 198, 208, 0.14);
+    color: #9ce4df;
+  }
+
+  .achievement-details-carousel {
+    min-width: 0;
+  }
+
+  .achievement-details-slide[hidden] {
+    display: none !important;
+  }
+
+  .achievement-details-slide.is-entering {
+    animation: achievement-slide-in 280ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+
+  @keyframes achievement-slide-in {
+    from {
+      opacity: 0;
+      transform: translateX(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .achievement-details-slide.is-entering {
+      animation-duration: 1ms;
+    }
+  }
+
+  .achievement-modal-certificate {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+    align-items: center;
+    gap: 28px;
+  }
+
+  .achievement-modal-certificate .certificate-preview-image {
+    max-height: min(62vh, 620px);
+  }
+
+  .achievement-modal-program h2 {
+    margin: 0 0 12px;
+    color: #f1f5f7;
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .achievement-modal-program h3 {
+    margin: 17px 0 9px;
+    color: #8edee8;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .achievement-modal-program > div:first-child > p:not(.mobility-eyebrow):not(.mobility-lede) {
+    margin: 0 0 12px;
+    color: rgba(207, 219, 228, 0.82);
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .achievement-modal-highlights {
+    display: grid;
+    gap: 7px;
+    margin: 0 0 14px;
+    padding-left: 19px;
+    color: rgba(207, 219, 228, 0.82);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .achievement-modal-gallery {
+    display: grid;
+    width: min(780px, 100%);
+    justify-self: center;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .achievement-modal-gallery figure {
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid rgba(127, 180, 204, 0.24);
+    border-radius: 8px;
+    background: #080d12;
+  }
+
+  .achievement-modal-gallery img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    background: #080d12;
+  }
+
+  .achievement-modal-gallery figcaption {
+    min-height: 38px;
+    padding: 10px 12px;
+    color: rgba(227, 239, 243, 0.84);
+    font-size: 11px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  @media (max-width: 900px) {
+    .mobility-experience-inner {
+      max-width: 720px;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 28px;
+    }
+
+    .mobility-story h1 {
+      font-size: 34px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .mobility-experience {
+      padding: 94px 0 48px;
+    }
+
+    .mobility-experience-inner {
+      width: calc(100% - 32px);
+      gap: 23px;
+    }
+
+    .mobility-story h1 {
+      font-size: 29px;
+    }
+
+    .mobility-lede {
+      font-size: 17px;
+    }
+
+    .mobility-description,
+    .mobility-closing {
+      font-size: 13px;
+    }
+
+    .mobility-carousel figcaption {
+      padding-right: 38px;
+      padding-left: 38px;
+      font-size: 10px;
+    }
+  }
+
 .cert-card {
     width: 100%;
     min-width: 0;
@@ -389,6 +758,19 @@ html{
     .modal-layout {
       grid-template-columns: minmax(0, 1fr);
       gap: 18px;
+    }
+    .achievement-modal-program h2 {
+      font-size: 21px;
+    }
+    .achievement-modal-gallery {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .achievement-modal-certificate {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 18px;
+    }
+    .achievement-modal-certificate .certificate-preview-image {
+      max-height: 42vh;
     }
     .certificate-preview-image {
       max-height: 48vh;
@@ -3538,6 +3920,20 @@ body.training-page {
   transition: transform 400ms cubic-bezier(0.2, 0.7, 0.25, 1), filter 400ms ease;
 }
 
+.certificate-image-frame::after {
+  display: none;
+}
+
+.certificate-image-frame img {
+  padding: 12px;
+  background: #e8edf0;
+  object-fit: contain;
+}
+
+.certificate-course-card:hover .certificate-image-frame img {
+  transform: none;
+}
+
 .course-card:hover .course-image-frame img,
 .training-card:hover .course-image-frame img {
   filter: saturate(1.05);
@@ -3550,7 +3946,7 @@ body.training-page {
   bottom: 11px;
   left: 12px;
   color: rgba(239, 248, 251, 0.82);
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 600;
 }
 
@@ -3579,7 +3975,7 @@ body.training-page {
 }
 
 .course-image-fallback small {
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .course-image-frame.is-fallback img,
@@ -3606,14 +4002,14 @@ body.training-page {
 
 .course-card-meta span {
   color: #8edee8;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.03em;
 }
 
 .course-card-meta span + span {
-  color: rgba(174, 192, 204, 0.58);
-  font-size: 8px;
+  color: rgba(196, 211, 221, 0.82);
+  font-size: 11px;
   font-weight: 500;
 }
 
@@ -3621,7 +4017,7 @@ body.training-page {
 .training-card h3 {
   margin: 0;
   color: #eff5f8;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.35;
   letter-spacing: 0;
@@ -3632,8 +4028,8 @@ body.training-page {
   flex-wrap: wrap;
   gap: 5px;
   margin: 9px 0 0;
-  color: rgba(167, 189, 203, 0.63);
-  font-size: 10px;
+  color: rgba(190, 207, 219, 0.84);
+  font-size: 12px;
 }
 
 .course-provider span {
@@ -3643,8 +4039,8 @@ body.training-page {
 .course-description {
   margin: 12px 0 14px;
   color: rgba(207, 219, 228, 0.78);
-  font-size: 11px;
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .course-status {
@@ -3654,8 +4050,8 @@ body.training-page {
   margin: 0;
   padding-top: 11px;
   border-top: 1px solid rgba(141, 177, 196, 0.13);
-  color: rgba(180, 198, 210, 0.71);
-  font-size: 9px;
+  color: rgba(198, 213, 223, 0.84);
+  font-size: 11px;
 }
 
 .course-status span {
@@ -4131,6 +4527,10 @@ body.training-page {
   box-shadow: 0 22px 52px rgba(0, 0, 0, 0.28), inset 0 1px rgba(255, 255, 255, 0.045);
   backdrop-filter: blur(12px);
   transition: border-color 240ms ease, box-shadow 240ms ease, transform 240ms ease;
+}
+
+.featured-project-card + .featured-project-card {
+  margin-top: 24px;
 }
 
 .featured-project-card:hover {

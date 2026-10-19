@@ -2,9 +2,9 @@
   const projectCards = [...document.querySelectorAll('[data-project-card]')];
   const filterButtons = [...document.querySelectorAll('[data-project-filter]')];
   const emptyState = document.querySelector('[data-projects-empty]');
-  const dialog = document.querySelector('.project-details-dialog');
-  const openDetailsButton = document.querySelector('[data-open-project-details]');
-  const closeDetailsButton = document.querySelector('[data-close-project-details]');
+  const dialogs = [...document.querySelectorAll('.project-details-dialog')];
+  const openDetailsButtons = [...document.querySelectorAll('[data-open-project-details]')];
+  const closeDetailsButtons = [...document.querySelectorAll('[data-close-project-details]')];
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const focusAreas = new Set(projectCards.flatMap(card => card.dataset.focusAreas.split(' ')));
@@ -37,18 +37,23 @@
     button.addEventListener('click', () => applyFilter(button.dataset.projectFilter));
   });
 
-  function closeDialog() {
-    if (dialog.open) {
-      dialog.close();
-    }
+  function closeDialog(dialog) {
+    if (dialog.open) dialog.close();
   }
 
-  openDetailsButton.addEventListener('click', () => dialog.showModal());
-  closeDetailsButton.addEventListener('click', closeDialog);
-  dialog.addEventListener('click', event => {
-    if (event.target === dialog) {
-      closeDialog();
-    }
+  openDetailsButtons.forEach(button => {
+    const dialog = document.getElementById(button.dataset.projectDialog);
+    if (dialog) button.addEventListener('click', () => dialog.showModal());
+  });
+
+  closeDetailsButtons.forEach(button => {
+    button.addEventListener('click', () => closeDialog(button.closest('dialog')));
+  });
+
+  dialogs.forEach(dialog => {
+    dialog.addEventListener('click', event => {
+      if (event.target === dialog) closeDialog(dialog);
+    });
   });
 
   if (!reducedMotion && 'IntersectionObserver' in window) {

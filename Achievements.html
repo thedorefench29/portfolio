@@ -2,13 +2,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audrey Maven Concepcion | About Me</title>
+    <title>Audrey Maven Concepcion | Achievements</title>
     <meta name="description" content="">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="src/assets/css/styles.css">
     <link rel="icon" href="src/assets/media/audrey/professional-portfolio_3476457.png" type="image/icon type">
+    <style>
+        html, body { scrollbar-width: none; -ms-overflow-style: none; }
+        html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; width: 0; height: 0; }
+        .page-scroll-button { position: fixed; right: max(18px, env(safe-area-inset-right)); bottom: max(18px, env(safe-area-inset-bottom)); z-index: 999; display: grid; width: 48px; height: 48px; place-items: center; border: 1px solid rgba(100, 218, 232, .55); border-radius: 50%; background: rgba(8, 20, 28, .92); color: #c9fbff; box-shadow: 0 8px 24px rgba(0, 0, 0, .36), 0 0 18px rgba(43, 196, 216, .16); cursor: pointer; opacity: 0; pointer-events: none; transform: translateY(8px) scale(.96); transition: opacity 180ms ease, transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease, visibility 180ms; visibility: hidden; }
+        .page-scroll-button.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0) scale(1); visibility: visible; }
+        .page-scroll-button:hover, .page-scroll-button:focus-visible { border-color: #8ff3fb; background: rgba(19, 69, 82, .96); box-shadow: 0 10px 28px rgba(0, 0, 0, .42), 0 0 22px rgba(43, 196, 216, .28); color: #fff; transform: translateY(-2px) scale(1.04); }
+        .page-scroll-button:focus-visible { outline: 2px solid #a3f5fc; outline-offset: 3px; }
+        .page-scroll-button svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; }
+        @media (max-width: 600px) { .page-scroll-button { right: max(14px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); width: 44px; height: 44px; } }
+        @media (prefers-reduced-motion: reduce) { .page-scroll-button { transition: none; } }
+    </style>
 </head>
 <body>
     <div id="particles-js"></div>
@@ -62,13 +73,79 @@
         </div>
     </nav>
 </header>
-<section class="maintenance-section">
-    <div class="maintenance-card">
-        <span class="maintenance-badge">Page Status</span>
-        <h1>Under Maintenance</h1>
-        <p>This section is currently being updated. Please check back soon for new achievements, milestones, and accomplishments.</p>
+<section class="certifications-section achievement-feature-section starfield" aria-labelledby="achievements-title">
+    <div class="container-certs">
+        <div class="certificate-page-heading">
+            <h1 class="section-title certificate-page-title" id="achievements-title"><span>Research</span> <span class="certificate-title-accent">Achievement</span></h1>
+            <p class="certificate-page-subtitle">Recognition for research presentation and innovation</p>
+        </div>
+        <div class="cert-grid achievement-cert-grid">
+            <div class="cert-card anim">
+                <div class="cert-image-container">
+                    <img src="src/assets/media/audrey/certifications/certificate of particate.png" alt="Certificate of appreciation for presenting augmented reality AI-assisted hairstyle customization research" class="cert-image">
+                </div>
+                <h2 class="cert-title"><span class="cert-title-label">Certificate of Appreciation</span>Augmented Reality AI-Assisted Hairstyle Customization</h2>
+                <div class="cert-skills">
+                    <span class="skill-tag">Research Presentation</span>
+                    <span class="skill-tag">May 21, 2026</span>
+                </div>
+                <button class="btn-cert" type="button" data-image-src="src/assets/media/audrey/certifications/certificate of particate.png" data-cert-title="Augmented Reality AI-Assisted Hairstyle Customization" data-issuer="Certificate of Appreciation" data-date="May 21, 2026" data-verification="Not provided" data-description="Recognized for successfully presenting research on AI-assisted hairstyle customization using augmented reality during the International Student Engagement and Exploration Program at Shenzhen City Polytechnic, China.">View Achievements</button>
+            </div>
+        </div>
     </div>
 </section>
+
+<div id="certModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="achievementDetailsTitle">
+    <div class="modal-dialog">
+        <button class="close-btn" id="closeCertModal" type="button" aria-label="Close certificate view">&times;</button>
+        <h2 class="visually-hidden" id="achievementDetailsTitle">International Student Mobility Program and Research Achievement</h2>
+        <div class="achievement-modal-steps" role="group" aria-label="Achievement details slides">
+            <button type="button" class="achievement-modal-step active" data-achievement-slide="program" aria-pressed="true">Program</button>
+            <button type="button" class="achievement-modal-step" data-achievement-slide="certificate" aria-pressed="false">Certificate</button>
+        </div>
+        <div class="achievement-details-slides" aria-label="Program and certificate details">
+            <section class="achievement-details-slide" data-achievement-slide-panel="program" aria-labelledby="achievementModalProgramTitle">
+                <div class="achievement-modal-program">
+                    <div>
+                        <p class="mobility-eyebrow"><span aria-hidden="true"></span>Global Learning · Hong Kong–Shenzhen, China</p>
+                        <h2 id="achievementModalProgramTitle">BSIT and BSBA International Student Mobility Program</h2>
+                        <p class="mobility-lede">Why stay inside the classroom when learning can take you across the world?</p>
+                        <p>The BSIT and BSBA students of St. Dominic College of Asia experienced an incredible International Student Mobility Program in Hong Kong–Shenzhen, China, combining education, technology, culture, and adventure in one unforgettable journey.</p>
+                        <h3>Highlights of the Global Experience</h3>
+                        <ul class="achievement-modal-highlights">
+                            <li>Fun and unforgettable moments at Hong Kong Disneyland</li>
+                            <li>Industry visit to High Great, the world-famous drone company featured in the Guinness Book of Records</li>
+                            <li>Research presentation at Shenzhen City Polytechnic</li>
+                            <li>International exposure, cultural immersion, and global networking opportunities</li>
+                        </ul>
+                        <p>At SDCA, education goes beyond lectures. We prepare students to become globally competitive professionals ready for the international stage.</p>
+                    </div>
+                    <div class="achievement-modal-gallery" aria-label="International Student Mobility Program photos">
+                        <figure><img src="src/assets/media/audrey/Achievements/848664723_1791830186277302_4166492864934637270_n.png" alt="BSIT and BSBA students at the Hong Kong–Shenzhen International Student Mobility Program"><figcaption>International Student Mobility Program · Hong Kong–Shenzhen, China</figcaption></figure>
+                        <figure><img src="src/assets/media/audrey/Achievements/851924312_1690212159401558_8950586453395479345_n.png" alt="Students visiting Hong Kong Disneyland during the mobility program"><figcaption>Cultural immersion at Hong Kong Disneyland</figcaption></figure>
+                        <figure><img src="src/assets/media/audrey/Achievements/852724202_1587622332555767_6029017931061346291_n.png" alt="Students presenting research at Shenzhen City Polytechnic"><figcaption>Research presentation at Shenzhen City Polytechnic</figcaption></figure>
+                        <figure><img src="src/assets/media/audrey/Achievements/855056141_2549869525490873_1549860214646017764_n.png" alt="Students visiting High Great during the international program"><figcaption>Industry visit to High Great</figcaption></figure>
+                    </div>
+                </div>
+            </section>
+            <section class="achievement-details-slide" data-achievement-slide-panel="certificate" aria-labelledby="modalTitle" hidden>
+                <div class="achievement-modal-certificate">
+                    <img class="certificate-preview-image" id="modalImage" alt="Certificate preview">
+                    <section class="modal-details" id="modalDetails">
+                        <h2 class="modal-title" id="modalTitle"></h2>
+                        <dl class="modal-cert-fields">
+                            <div><dt>Certification Title</dt><dd id="modalCertTitle"></dd></div>
+                            <div><dt>Issuing Organization / Platform</dt><dd id="modalIssuer"></dd></div>
+                            <div><dt>Date Earned</dt><dd id="modalDate"></dd></div>
+                            <div><dt>Verification Code</dt><dd id="modalVerification"></dd></div>
+                        </dl>
+                        <p class="modal-description" id="modalDescription"></p>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
    
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -78,6 +155,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="src/assets/js/script.js"></script>
 <script src="src/assets/js/about-me.js"></script>
+<script src="src/assets/js/certificate-modal.js"></script>
 
 <script>
     // This is Touchscreen with close navbar
@@ -107,5 +185,47 @@
     }
   </script>
 
+<button class="page-scroll-button" type="button" data-scroll-down aria-label="Scroll to the next section" aria-hidden="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-7-7 7 7 7-7"/></svg></button>
+<button class="page-scroll-button" type="button" data-scroll-up aria-label="Scroll to the top" aria-hidden="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V4m-7 7 7-7 7 7"/></svg></button>
+<script>
+(() => {
+    const downButton = document.querySelector('[data-scroll-down]');
+    const upButton = document.querySelector('[data-scroll-up]');
+    const sections = [...document.querySelectorAll('main > section, body > section')];
+    const navbar = document.querySelector('.navbar');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const visibilityThreshold = 64;
+
+    function updateButtons() {
+        const scrollTop = window.scrollY;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const downVisible = scrollTop <= visibilityThreshold && maxScroll > 24;
+        const upVisible = scrollTop > visibilityThreshold;
+        downButton.classList.toggle('is-visible', downVisible);
+        downButton.setAttribute('aria-hidden', String(!downVisible));
+        downButton.tabIndex = downVisible ? 0 : -1;
+        upButton.classList.toggle('is-visible', upVisible);
+        upButton.setAttribute('aria-hidden', String(!upVisible));
+        upButton.tabIndex = upVisible ? 0 : -1;
+    }
+
+    downButton.addEventListener('click', () => {
+        const navHeight = navbar ? navbar.getBoundingClientRect().height : 0;
+        const currentTop = window.scrollY + navHeight + 56;
+        const nextSection = sections.find(section => section.getBoundingClientRect().top + window.scrollY > currentTop);
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const target = nextSection
+            ? nextSection.getBoundingClientRect().top + window.scrollY - navHeight - 18
+            : Math.min(maxScroll, window.scrollY + Math.max(320, window.innerHeight * .85));
+        window.scrollTo({ top: Math.max(0, target), behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+    });
+
+    upButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reducedMotion.matches ? 'instant' : 'smooth' }));
+    window.addEventListener('scroll', updateButtons, { passive: true });
+    window.addEventListener('resize', updateButtons, { passive: true });
+    window.addEventListener('pageshow', updateButtons);
+    updateButtons();
+})();
+</script>
 </body>
 </html>
