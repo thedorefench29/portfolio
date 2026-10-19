@@ -24,33 +24,103 @@
                     <li class="nav-item">
                         <a class="nav-link" onclick="goToPage('home.html')" >Home</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" onclick="goToPage('about-me.html')" style="color: white">About Me</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" onclick="goToPage('tech-stack.html')">Tech Stack</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link"  onclick="goToPage('Certificate.html')">Certificate</a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"  onclick="goToPage('OnlineCourses&Training.html')">Online Courses & Training</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"  onclick="goToPage('CompetitionsandAwards.html')">Competitions and Awards</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"  onclick="goToPage('Achievements.html')">Achievements</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="goToPage('Featureproject.html')">Featured Projects</a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="btn btn-primary nav-link"  onclick="goToPage('contact.html')">Contact</a>
                     </li>
+
                 </ul>
             </div>
         </div>
     </nav>
 </header>
-<section class="about" id="about">
-    <div class="about-img">
-        <img class="tilt-in-left-1" src="src/assets/media/audrey/091ff98d-513e-460e-862f-770c563192d8.jpg" alt="">
+<section class="about about-premium" id="about" aria-labelledby="about-premium-title">
+    <div class="about-premium-profile">
+        <figure class="about-premium-portrait">
+            <img class="about-premium-image" src="src/assets/media/audrey/091ff98d-513e-460e-862f-770c563192d8.jpg" alt="Portrait of Audrey Maven Concepcion">
+            <figcaption class="about-premium-status"><span aria-hidden="true"></span>Information Technology</figcaption>
+        </figure>
+        <p class="about-premium-caption"><span>Audrey Maven Concepcion</span><span>B.S. Information Technology</span></p>
     </div>
-<div class="about-content">
-    <h2 class="tracking-in-expand"> Get to Know me </h2>
-    <p class="text-focus-in">I am a hardworking second-year student studying for a Bachelor of Information Technology. I have hearing and speech disabilities, which have taught me to be strong and determined. Although technology was not my first passion, I found a love for web development during my studies. I enjoy learning new skills and fixing errors in my projects.</p>
-    <p class="text-focus-in">I am committed to creating websites that are easy to use and work well. I see every challenge as a chance to grow, and I approach each project with excitement. My strong work ethic helps me put in the effort needed to succeed.</p>
-</div>
+
+    <div class="about-premium-copy">
+        <p class="about-premium-eyebrow"><span aria-hidden="true"></span> About Me</p>
+        <h1 class="tracking-in-expand" id="about-premium-title">Get to Know Me</h1>
+        <span class="about-premium-accent" aria-hidden="true"></span>
+        <div class="about-premium-biography">
+            <p class="text-focus-in">Hello! I am a hardworking Information Technology graduate. As a Deaf individual, I have learned the importance of determination, patience, and finding effective ways to communicate and collaborate with others.</p>
+            <p class="text-focus-in">During my studies, I developed an interest in web development, programming, and software creation. I enjoy learning new technologies, solving coding problems, debugging applications, and improving my projects.</p>
+            <p class="text-focus-in">I am passionate about building user-friendly, accessible, and functional websites. I believe that being Deaf does not define the limits of my potential. Instead, I continue to develop my technical skills, embrace new learning opportunities, and work toward my goal of becoming a skilled software developer.</p>
+        </div>
+
+        <button class="about-story-button" type="button" data-open-about-story>
+            View Details
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5"/></svg>
+        </button>
+
+        <ul class="about-premium-highlights" aria-label="Personal highlights">
+            <li class="about-reveal">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg>
+                <span class="about-premium-highlight-copy"><strong>Web Development</strong><small>Creating responsive and user-friendly websites.</small></span>
+            </li>
+            <li class="about-reveal">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v17H6.5A2.5 2.5 0 0 0 4 22zM4 5.5v14A2.5 2.5 0 0 1 6.5 17H20M8 7h8M8 11h6"/></svg>
+                <span class="about-premium-highlight-copy"><strong>Problem Solving</strong><small>Debugging code and improving software functionality.</small></span>
+            </li>
+            <li class="about-reveal">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 22h4M8.5 14.5a7 7 0 1 1 7 0c-.9.7-1.5 1.7-1.5 2.5h-4c0-.8-.6-1.8-1.5-2.5Z"/></svg>
+                <span class="about-premium-highlight-copy"><strong>Continuous Learning</strong><small>Building technical skills and exploring new technologies.</small></span>
+            </li>
+        </ul>
+    </div>
 </section>
+
+<dialog class="about-story-dialog" aria-labelledby="about-story-title">
+    <div class="about-story-dialog-shell">
+        <div class="about-story-dialog-heading">
+            <div>
+                <p class="about-premium-eyebrow">My Story</p>
+                <h2 id="about-story-title">From a quiet world to a future in IT</h2>
+            </div>
+            <button class="about-story-dialog-close" type="button" aria-label="Close story" data-close-about-story>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
+            </button>
+        </div>
+        <div class="about-story-dialog-body">
+            <p>Living with Waardenburg syndrome has shaped how I experience the world. It gave me distinctive eye pigmentation and hearing loss, and with a cochlear implant I learned to hear, communicate, and speak through patience, extra effort, and hard work. Information Technology was not my original childhood dream. My path into IT began when a cochlear implant, the first high-tech device to transform my daily life, opened the world of sound and speech to me.</p>
+            <p>Recognizing both the high financial cost and profound impact of this life-changing technology sparked a deep curiosity in me. I wanted to understand how technology works from the inside out, and how hardware components, audio signals, and software systems interact to solve real human challenges. What began as a personal need to navigate a quiet world gradually grew into a lifelong drive to master technology. Living with Waardenburg syndrome taught me that barriers can be overcome and that persistence leads to progress.</p>
+            <p>I bring that same discipline, grit, and problem-solving mindset to every technical challenge I take on. Experiencing firsthand how advanced technology can change a person's life gave me a unique perspective: IT is not just about code or circuits, but about building meaningful solutions that empower people. As I prepare for my upcoming IT internship, I am eager to bring my work ethic, technical skills, and adaptability into a professional environment, continuing to turn challenges into strength and growth.</p>
+        </div>
+    </div>
+</dialog>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
@@ -58,6 +128,7 @@
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="src/assets/js/script.js"></script>
+<script src="src/assets/js/about-me.js"></script>
 
 <script>
     // This is Touchscreen with close navbar

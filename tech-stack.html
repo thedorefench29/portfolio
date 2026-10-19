@@ -21,18 +21,38 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" onclick="goToPage('home.html')">Home</a>
+                     <li class="nav-item">
+                        <a class="nav-link" onclick="goToPage('home.html')" >Home</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" onclick="goToPage('about-me.html')">About Me</a>
+                        <a class="nav-link" onclick="goToPage('about-me.html')" >About Me</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" onclick="goToPage('tech-stack.html')" style="color: white">Tech Stack</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link"  onclick="goToPage('Certificate.html')">Certificate</a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"  onclick="goToPage('OnlineCourses&Training.html')">Online Courses & Training</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"  onclick="goToPage('Competitions andAwards.html')">Competitions and Awards</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"  onclick="goToPage('Achievements.html')">Achievements</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="goToPage('Featureproject.html')">Featured Projects</a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="btn btn-primary nav-link"  onclick="goToPage('contact.html')">Contact</a>
                     </li>
@@ -42,77 +62,45 @@
     </nav>
 </header>
 
-<section class="skills-section starfield" id="MySkills">
-    <h1 class="skills-title tracking-in-expand ">Tech Stack</h1>
-    <div class="skills-container">
-        <div class="skills-category ">
-            <h2 class="tracking-in-contract" >Languages</h2>
+<section class="skills-section starfield tech-stack-section" id="MySkills" aria-labelledby="tech-stack-title">
+    <header class="tech-stack-heading">
+        <p class="tech-stack-kicker"><span aria-hidden="true"></span> Development Ecosystem</p>
+        <h1 class="skills-title tracking-in-expand" id="tech-stack-title">Tech Stack</h1>
+        <span class="tech-stack-accent" aria-hidden="true"></span>
+        <p>The technologies and tools I use to build modern digital experiences.</p>
+    </header>
+
+    <div class="skills-container tech-stack-grid">
+        <section class="skills-category tech-stack-category" aria-labelledby="languages-heading">
+            <h2 class="tracking-in-contract" id="languages-heading"><span aria-hidden="true">01</span> Languages</h2>
             <ul>
-                <li class="skill-item fade-in-fwd ">
-                    <img src="src/assets/media/audrey/html-5_5968267.png" alt="HTML Icon">
-                    <span>HTML</span>
-                </li>
-                <li class="skill-item fade-in-fwd ">
-                    <img src="src/assets/media/audrey/css-3.png" alt="CSS Icon">
-                    <span>CSS</span>
-                </li>
-                <li class="skill-item fade-in-fwd ">
-                    <img src="src/assets/media/audrey/js_5968292.png" alt="JavaScript Icon">
-                    <span>JavaScript</span>
-                </li>
-                <li class="skill-item fade-in-fwd ">
-                    <img src="src/assets/media/audrey/java-programming-language-icon.png" alt="JavaScript Icon">
-                    <span>Java</span>
-                </li>
-                <li class="skill-item fade-in-fwd ">
-                    <img src="src/assets/media/audrey/dart.png" alt="Dart Icon">
-                    <span>Dart</span>
-                </li>
+                <li class="skill-item fade-in-fwd"><img src="src/assets/media/audrey/html-5_5968267.png" alt=""><span>HTML5</span></li>
+                <li class="skill-item fade-in-fwd"><img src="src/assets/media/audrey/css-3.png" alt=""><span>CSS3</span></li>
+                <li class="skill-item fade-in-fwd"><img src="src/assets/media/audrey/js_5968292.png" alt=""><span>JavaScript</span></li>
+                <li class="skill-item fade-in-fwd"><img src="src/assets/media/audrey/java-programming-language-icon.png" alt=""><span>Java</span></li>
+                <li class="skill-item fade-in-fwd"><img src="src/assets/media/audrey/dart.png" alt=""><span>Dart</span></li>
             </ul>
-        </div>
-        <div class="skills-category ">
-            <h2 class="tracking-in-contract" >Frameworks</h2>
+        </section>
+
+        <section class="skills-category tech-stack-category" aria-labelledby="frameworks-heading">
+            <h2 class="tracking-in-contract" id="frameworks-heading"><span aria-hidden="true">02</span> Frameworks</h2>
             <ul>
-                <li class="skill-item fade-in-fwd ">
-                    <img src="src/assets/media/audrey/flutter.png" alt="Flutter Icon">
-                    <span>Flutter</span>
-                </li>
-                <li class="skill-item fade-in-fwd ">
-                    <img src="src/assets/media/audrey/Nodejs.png" alt="Node Icon">
-                    <span>Node</span>
-                </li>
-                <li class="skill-item fade-in-fwd ">
-                    <img src="src/assets/media/audrey/express-js.png" alt="Express Icon">
-                    <span>Express</span>
-                </li>
+                <li class="skill-item fade-in-fwd"><img src="src/assets/media/audrey/flutter.png" alt=""><span>Flutter</span></li>
+                <li class="skill-item fade-in-fwd"><img src="src/assets/media/audrey/Nodejs.png" alt=""><span>Node.js</span></li>
+                <li class="skill-item fade-in-fwd"><img src="src/assets/media/audrey/express-js.png" alt=""><span>Express.js</span></li>
             </ul>
-        </div>
-        <div class="skills-category">
-            <h2 class="tracking-in-contract">Tools</h2>
+        </section>
+
+        <section class="skills-category tech-stack-category" aria-labelledby="tools-heading">
+            <h2 class="tracking-in-contract" id="tools-heading"><span aria-hidden="true">03</span> Tools</h2>
             <ul>
-                <li class="skill-item fade-in-fwd ">
-                    <img src="src/assets/media/audrey/icons8-github-400.png"alt="GitHub Icon">
-                    <span>GitHub</span>
-                </li>
-                <li class="skill-item fade-in-fwd ">
-                    <img src="src/assets/media/audrey/icons8-visual-studio-code-2019-240.png" alt="VS Code Icon">
-                    <span>VS Code</span>
-                </li>
-                  <li class="skill-item fade-in-fwd ">
-                    <img src="src/assets/media/audrey/android-studio-icon.png" alt="JavaScript Icon">
-                    <span>Android Studio</span>
-                </li>
-                <li class="skill-item fade-in-fwd ">
-                    <img src="src/assets/media/audrey/git-icon.png" alt="JavaScript Icon">
-                    <span>Git</span>
-                </li>
-                
-                <li class="skill-item fade-in-fwd ">
-                    <img src="src/assets/media/audrey/Firebase.png" alt="Firebase Icon">
-                    <span>Firebase</span>
-                </li>
+                <li class="skill-item fade-in-fwd"><img src="src/assets/media/audrey/icons8-github-400.png" alt=""><span>GitHub</span></li>
+                <li class="skill-item fade-in-fwd"><img src="src/assets/media/audrey/icons8-visual-studio-code-2019-240.png" alt=""><span>Visual Studio Code</span></li>
+                <li class="skill-item fade-in-fwd"><img src="src/assets/media/audrey/android-studio-icon.png" alt=""><span>Android Studio</span></li>
+                <li class="skill-item fade-in-fwd"><img src="src/assets/media/audrey/git-icon.png" alt=""><span>Git</span></li>
+                <li class="skill-item fade-in-fwd"><img src="src/assets/media/audrey/Firebase.png" alt=""><span>Firebase</span></li>
             </ul>
-        </div>
+        </section>
     </div>
 </section>
 
