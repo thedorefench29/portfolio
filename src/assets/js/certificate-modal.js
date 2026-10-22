@@ -11,6 +11,7 @@
   const modalVerification = document.getElementById('modalVerification');
   const modalDescription = document.getElementById('modalDescription');
   const closeButton = document.getElementById('closeCertModal');
+  const achievementSlideNav = modal.querySelector('.achievement-modal-steps');
   const achievementSlideButtons = document.querySelectorAll('[data-achievement-slide]');
   const achievementSlidePanels = document.querySelectorAll('[data-achievement-slide-panel]');
 
@@ -39,7 +40,9 @@
 
   function openModal(button) {
     const hasCertificateDetails = button.hasAttribute('data-cert-title');
-    showAchievementSlide('program');
+    const openSlide = button.dataset.openSlide || (hasCertificateDetails ? 'certificate' : 'program');
+    if (achievementSlideNav) achievementSlideNav.hidden = openSlide !== 'program';
+    showAchievementSlide(openSlide);
     modal.classList.remove('is-closing');
     modal.classList.toggle('is-image-only', !hasCertificateDetails);
     modalDetails.hidden = !hasCertificateDetails;
@@ -63,7 +66,7 @@
     if (!modal.classList.contains('is-closing')) return;
     modal.style.display = 'none';
     modal.setAttribute('aria-hidden', 'true');
-    modalImage.src = '';
+    modalImage.removeAttribute('src');
     modal.classList.remove('is-closing');
   }
 

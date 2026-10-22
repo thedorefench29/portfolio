@@ -113,6 +113,45 @@ html{
     align-items: start;
 }
 
+.awards-intro {
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.awards-section-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 auto;
+}
+
+.awards-section-nav a {
+    padding: 10px 16px;
+    border: 1px solid rgba(117, 178, 200, 0.24);
+    border-radius: 999px;
+    background: rgba(5, 11, 17, 0.72);
+    color: rgba(218, 239, 246, 0.88);
+    font-size: 13px;
+    text-decoration: none;
+    transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.awards-section-nav a:hover,
+.awards-section-nav a:focus-visible {
+    border-color: rgba(95, 221, 237, 0.7);
+    background: rgba(40, 140, 160, 0.2);
+    color: #fff;
+}
+
+#certificates,
+#competitions-awards,
+#research-achievements {
+    height: auto;
+    min-height: 100vh;
+    scroll-margin-top: 76px;
+}
+
   .achievement-cert-grid {
     max-width: 640px;
     grid-template-columns: minmax(0, 1fr);
@@ -1752,12 +1791,12 @@ li,a,button{
   .navbar .navbar-nav .nav-link:not(.btn-primary) {
     margin: 0;
     padding: 11px 12px;
-    text-align: left;
+    text-align: center;
   }
 
   .navbar .navbar-nav .btn.btn-primary.nav-link {
     width: fit-content;
-    margin: 5px 0 0;
+    margin: 5px auto 0;
     padding: 10px 17px;
   }
 }
