@@ -166,10 +166,17 @@
 
         <p class="projects-empty" data-projects-empty role="status" hidden>No documented projects in this category yet.</p>
 
-        <article class="featured-project-card project-reveal" data-project-card data-categories="featured capstone" data-focus-areas="artificial-intelligence augmented-reality" data-recognized="true">
-            <figure class="featured-project-cover">
-                <img src="src/assets/media/audrey/coming-soon.svg" alt="Coming soon project placeholder">
-                <figcaption>Project coming soon</figcaption>
+        <article class="featured-project-card project-reveal" data-project-card data-categories="featured capstone iot" data-focus-areas="artificial-intelligence augmented-reality" data-recognized="true">
+            <figure class="featured-project-cover stylehair-project-cover">
+                <div class="stylehair-media-pair">
+                    <button type="button" class="stylehair-photo-button" data-open-project-photo aria-label="View StyleHaiR hairstyle recommendation interface and flyers photo" data-photo-src="src/assets/media/audrey/Hairstyle/857672446_1468557188453400_4152475435301648121_n.jpg" data-photo-alt="StyleHaiR hairstyle recommendation interface displayed on a phone beside project flyers">
+                        <img src="src/assets/media/audrey/Hairstyle/857672446_1468557188453400_4152475435301648121_n.jpg" alt="StyleHaiR hairstyle recommendation interface displayed on a phone beside project flyers">
+                    </button>
+                    <button type="button" class="stylehair-photo-button" data-open-project-photo aria-label="View StyleHaiR project exhibit photo" data-photo-src="src/assets/media/audrey/Hairstyle/858606205_1142477081613668_2165585959916769386_n.jpg" data-photo-alt="StyleHaiR project demonstration at a student exhibit">
+                        <img src="src/assets/media/audrey/Hairstyle/858606205_1142477081613668_2165585959916769386_n.jpg" alt="StyleHaiR project demonstration at a student exhibit">
+                    </button>
+                </div>
+                <figcaption>StyleHaiR project photos</figcaption>
             </figure>
             <div class="featured-project-content">
                 <div class="featured-project-meta">
@@ -177,7 +184,7 @@
                     <span class="project-status"><span aria-hidden="true"></span> Research presented</span>
                 </div>
                 <p class="featured-project-kicker">Featured Capstone</p>
-                <h2>StyleHaiR: An AI-Driven Augmented Reality Hairstyle Recommendation System</h2>
+                <h2><button type="button" class="featured-project-title-button" data-open-project-details data-project-dialog="stylehair-details">StyleHaiR: An AI-Driven Augmented Reality Hairstyle Recommendation System</button></h2>
                 <p class="featured-project-summary">A capstone project exploring AI-assisted hairstyle recommendations alongside augmented-reality hairstyle visualization, bringing personalized ideas and visual previews into one experience.</p>
 
                 <div class="project-focus-list" aria-label="Project focus areas">
@@ -195,6 +202,10 @@
                     <button type="button" class="project-details-button" data-open-project-details data-project-dialog="stylehair-details">
                         View Details
                         <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5"/></svg>
+                    </button>
+                    <button type="button" class="project-details-button stylehair-video-button" data-open-project-video>
+                        Watch Video
+                        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 9 6-9 6z"/></svg>
                     </button>
                 </div>
             </div>
@@ -228,6 +239,7 @@
                 </div>
             </div>
         </article>
+
     </section>
 
 </main>
@@ -309,6 +321,44 @@
                     <p>Project image and additional details coming soon.</p>
                 </section>
             </div>
+        </div>
+    </div>
+</dialog>
+
+<dialog class="project-details-dialog project-photo-dialog" id="stylehair-photo" aria-label="StyleHaiR project photo">
+    <button type="button" class="project-dialog-close project-photo-close" aria-label="Close project photo" data-close-project-photo>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
+    </button>
+    <img class="project-photo-preview" alt="">
+    <div class="project-photo-navigation" aria-label="Photo navigation">
+        <button type="button" class="project-photo-nav-button" data-previous-project-photo aria-label="Previous photo">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m12.5 4-6 6 6 6"/></svg>
+            <span>Back</span>
+        </button>
+        <span class="project-photo-count" data-project-photo-count aria-live="polite"></span>
+        <button type="button" class="project-photo-nav-button" data-next-project-photo aria-label="Next photo">
+            <span>Next</span>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7.5 4 6 6-6 6"/></svg>
+        </button>
+    </div>
+</dialog>
+
+<dialog class="project-details-dialog project-video-dialog" id="stylehair-video" aria-labelledby="stylehair-video-title">
+    <div class="project-dialog-shell">
+        <div class="project-dialog-heading">
+            <div>
+                <p class="featured-project-kicker">Project video</p>
+                <h2 id="stylehair-video-title">StyleHaiR</h2>
+            </div>
+            <button type="button" class="project-dialog-close" aria-label="Close project video" data-close-project-video>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
+            </button>
+        </div>
+        <div class="project-video-player">
+            <video controls playsinline preload="metadata" aria-label="StyleHaiR project demonstration video">
+                <source src="src/assets/media/audrey/Hairstyle/AQO-wxWYyhQX5xgXf4rZa8-IcvJQskwwEQ-gRGAZ6bNm9Cn4j3W_8cKP9IM_vPjxnuUS4y4oGmQGqBTsW9qtHf3mDrjR-UaBOir1Htrjww.mp4" type="video/mp4">
+                Your browser does not support HTML video.
+            </video>
         </div>
     </div>
 </dialog>
