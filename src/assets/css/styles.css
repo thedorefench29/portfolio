@@ -5464,6 +5464,26 @@ body.training-page {
   transition: transform 220ms ease, border-color 220ms ease, background 220ms ease, box-shadow 220ms ease;
 }
 
+.tech-stack-section .skill-item.skill-item-text {
+  min-height: 72px;
+}
+
+.tech-stack-section .skill-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  place-items: center;
+  border: 1px solid rgba(91, 201, 231, 0.24);
+  border-radius: 13px;
+  background: linear-gradient(145deg, rgba(77, 220, 255, 0.16), rgba(139, 114, 248, 0.12));
+  color: #a5efff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
 .tech-stack-section .skill-item img {
   width: 48px;
   height: 48px;
@@ -5473,6 +5493,10 @@ body.training-page {
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025));
   object-fit: contain;
   transition: transform 220ms ease, filter 220ms ease;
+}
+
+.tech-stack-section .skill-item img.skill-logo-invert {
+  filter: invert(1);
 }
 
 .tech-stack-section .skill-item span {
@@ -5496,6 +5520,10 @@ body.training-page {
 .tech-stack-section .skill-item:hover img {
   filter: drop-shadow(0 0 7px rgba(93, 219, 255, 0.4));
   transform: scale(1.08);
+}
+
+.tech-stack-section .skill-item:hover img.skill-logo-invert {
+  filter: invert(1) drop-shadow(0 0 7px rgba(93, 219, 255, 0.4));
 }
 
 @keyframes tech-text-rise {
