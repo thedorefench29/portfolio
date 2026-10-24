@@ -4651,6 +4651,30 @@ body.training-page {
   object-fit: contain;
 }
 
+.project-image-slideshow {
+  display: grid;
+  width: min(100%, 500px);
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 0;
+}
+
+.featured-project-cover .project-image-slideshow img {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: clamp(150px, 25vw, 300px);
+  border: 1px solid rgba(127, 180, 204, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 350ms ease;
+}
+
+.featured-project-cover .project-image-slideshow img.is-active {
+  opacity: 1;
+}
+
 .stylehair-media-pair {
   display: grid;
   width: min(100%, 500px);
@@ -5314,7 +5338,8 @@ body.training-page {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .stylehair-photo-button {
+  .stylehair-photo-button,
+  .featured-project-cover .project-image-slideshow img {
     transition: none;
   }
 

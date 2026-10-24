@@ -5,6 +5,7 @@
   const dialogs = [...document.querySelectorAll('.project-details-dialog')];
   const openDetailsButtons = [...document.querySelectorAll('[data-open-project-details]')];
   const closeDetailsButtons = [...document.querySelectorAll('[data-close-project-details]')];
+  const projectImageSlideshows = [...document.querySelectorAll('.project-image-slideshow')];
   const videoDialog = document.querySelector('#stylehair-video');
   const projectVideo = videoDialog ? videoDialog.querySelector('video') : null;
   const photoDialog = document.querySelector('#stylehair-photo');
@@ -115,6 +116,26 @@
     showCardPhoto(0);
     window.setInterval(() => showCardPhoto(cardPhotoIndex + 1), 5000);
   }
+
+  projectImageSlideshows.forEach(group => {
+    const photos = [...group.querySelectorAll('img')];
+    if (photos.length < 2) return;
+
+    let currentIndex = 0;
+    function showProjectImage(index) {
+      currentIndex = (index + photos.length) % photos.length;
+      photos.forEach((photo, photoIndex) => {
+        const isActive = photoIndex === currentIndex;
+        photo.classList.toggle('is-active', isActive);
+        photo.setAttribute('aria-hidden', String(!isActive));
+      });
+    }
+
+    showProjectImage(0);
+    if (!reducedMotion) {
+      window.setInterval(() => showProjectImage(currentIndex + 1), 5000);
+    }
+  });
 
   photoButtons.forEach((button, index) => {
     button.addEventListener('click', () => {

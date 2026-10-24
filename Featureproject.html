@@ -158,8 +158,9 @@
                 <button type="button" class="project-filter is-active" data-project-filter="all" aria-pressed="true">All Projects</button>
                 <button type="button" class="project-filter" data-project-filter="featured" aria-pressed="false">Featured</button>
                 <button type="button" class="project-filter" data-project-filter="capstone" aria-pressed="false">Capstone Project</button>
+                <button type="button" class="project-filter" data-project-filter="capstone-defense" aria-pressed="false">Capstone Defense</button>
                 <button type="button" class="project-filter" data-project-filter="iot" aria-pressed="false">IoT Projects</button>
-                <button type="button" class="project-filter" data-project-filter="third-year" aria-pressed="false">Third-Year Projects</button>
+                <button type="button" class="project-filter" data-project-filter="third-year" aria-pressed="false">Projects</button>
                 <button type="button" class="project-filter" data-project-filter="web-apps" aria-pressed="false">Web Applications</button>
                 <button type="button" class="project-filter" data-project-filter="mobile-apps" aria-pressed="false">Mobile Applications</button>
             </div>
@@ -270,35 +271,6 @@
             </div>
         </article>
 
-        <article class="featured-project-card project-reveal" data-project-card data-categories="featured web-apps" data-focus-areas="artificial-intelligence student-inquiries" data-recognized="false">
-            <figure class="featured-project-cover">
-                <img src="src/assets/media/audrey/project/sdca_ai_assistant/sdca_ai_assistant.png" alt="SDCA AI Assistant secure sign-in page for St. Dominic College of Asia">
-                <figcaption>SDCA AI Assistant sign-in screen</figcaption>
-            </figure>
-            <div class="featured-project-content">
-                <div class="featured-project-meta">
-                    <span class="project-category-badge">AI / Student Services · Web Application</span>
-                    <span class="project-status"><span aria-hidden="true"></span>October 17, 2025</span>
-                </div>
-                <p class="featured-project-kicker">Project · October 17, 2025</p>
-                <h2><button type="button" class="featured-project-title-button" data-open-project-details data-project-dialog="sdca-ai-assistant-details">SDCA AI Assistant</button></h2>
-                <p class="featured-project-summary">An AI assistant for St. Dominic College of Asia, with a secure sign-in screen for users to access the assistant.</p>
-
-                <div class="project-focus-list" aria-label="Project focus areas">
-                    <span>AI assistant</span>
-                    <span>Student services</span>
-                    <span>Secure sign-in</span>
-                </div>
-
-                <div class="featured-project-actions">
-                    <button type="button" class="project-details-button" data-open-project-details data-project-dialog="sdca-ai-assistant-details">
-                        View Details
-                        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5"/></svg>
-                    </button>
-                </div>
-            </div>
-        </article>
-
         <article class="featured-project-card project-reveal" data-project-card data-categories="featured web-apps" data-focus-areas="cafe-management staff-access qr-inventory" data-recognized="false">
             <figure class="featured-project-cover">
                 <img src="src/assets/media/audrey/project/Cafe%20Barista/Cafe%20Barista.jpe" alt="Cafe Baringa staff sign-in interface with QR login and inventory features">
@@ -328,19 +300,22 @@
             </div>
         </article>
 
-        <article class="featured-project-card project-reveal" data-project-card data-categories="featured capstone third-year" data-focus-areas="artificial-intelligence student-inquiries" data-recognized="false">
+        <article class="featured-project-card project-reveal" data-project-card data-categories="featured capstone third-year web-apps" data-focus-areas="artificial-intelligence student-inquiries" data-recognized="false">
             <figure class="featured-project-cover">
-                <img src="src/assets/media/audrey/coming-soon.svg" alt="Coming soon project image for the AI student inquiry assistant">
-                <figcaption>Project image coming soon</figcaption>
+                <div class="project-image-slideshow">
+                    <img class="is-active" src="src/assets/media/audrey/project/sdca_ai_assistant/sdca_ai_assistant.png" alt="SDCA AI Assistant sign-in screen for St. Dominic College of Asia" aria-hidden="false">
+                    <img src="src/assets/media/audrey/project/sdca_ai_assistant/858150368_1662105572195757_212618144820732589_n.jpg" alt="Additional SDCA AI Assistant project picture" aria-hidden="true">
+                </div>
+                <figcaption>SDCA AI Assistant project images</figcaption>
             </figure>
             <div class="featured-project-content">
                 <div class="featured-project-meta">
-                    <span class="project-category-badge">AI / Student Services</span>
-                    <span class="project-status"><span aria-hidden="true"></span>Image coming soon</span>
+                    <span class="project-category-badge">AI / Student Services · Web Application</span>
+                    <span class="project-status"><span aria-hidden="true"></span>Web Application</span>
                 </div>
-                <p class="featured-project-kicker">Third-Year Capstone · 2026–2027</p>
+                <p class="featured-project-kicker">Web Application Project</p>
                 <h2>An AI Assistant for Student General Inquiries for St. Dominic College of Asia</h2>
-                <p class="featured-project-summary">An AI assistant project for student general inquiries at St. Dominic College of Asia.</p>
+                <p class="featured-project-summary">An AI assistant that helps St. Dominic College of Asia students find answers to general inquiries.</p>
 
                 <div class="project-focus-list" aria-label="Project academic details">
                     <span>Application Development and Emerging Technologies</span>
@@ -350,6 +325,39 @@
 
                 <div class="featured-project-actions">
                     <button type="button" class="project-details-button" data-open-project-details data-project-dialog="student-inquiries-details">
+                        View Details
+                        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5"/></svg>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article class="featured-project-card project-reveal" data-project-card data-categories="capstone capstone-defense third-year" data-focus-areas="capstone-defense research-presentation project-proposal" data-recognized="true">
+            <figure class="featured-project-cover">
+                <div class="project-image-slideshow">
+                    <img class="is-active" src="src/assets/media/audrey/project/defense/862063620_1844333583651623_6742376981096790600_n.jpg" alt="Capstone defense presentation photo" aria-hidden="false">
+                    <img src="src/assets/media/audrey/project/defense/858559156_1623533899506627_7634743448379656755_n.jpg" alt="Capstone defense presentation photo" aria-hidden="true">
+                    <img src="src/assets/media/audrey/project/defense/852724202_1884651582977622_8538152605933621528_n.jpg" alt="Capstone defense presentation photo" aria-hidden="true">
+                </div>
+                <figcaption>Capstone defense presentation photos</figcaption>
+            </figure>
+            <div class="featured-project-content">
+                <div class="featured-project-meta">
+                    <span class="project-category-badge">Capstone Defense</span>
+                    <span class="project-status"><span aria-hidden="true"></span>Project Presentation</span>
+                </div>
+                <p class="featured-project-kicker">Capstone Defense</p>
+                <h2><button type="button" class="featured-project-title-button" data-open-project-details data-project-dialog="capstone-defense-details">Capstone Defense Presentation</button></h2>
+                <p class="featured-project-summary">A capstone defense presentation sharing a project concept, its goals, and the proposed solution to a real-world need.</p>
+
+                <div class="project-focus-list" aria-label="Capstone defense focus areas">
+                    <span>Project concept</span>
+                    <span>Research presentation</span>
+                    <span>Proposed solution</span>
+                </div>
+
+                <div class="featured-project-actions">
+                    <button type="button" class="project-details-button" data-open-project-details data-project-dialog="capstone-defense-details">
                         View Details
                         <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5"/></svg>
                     </button>
@@ -430,37 +438,6 @@
     </div>
 </dialog>
 
-<dialog class="project-details-dialog" id="sdca-ai-assistant-details" aria-labelledby="sdca-ai-assistant-dialog-title">
-    <div class="project-dialog-shell">
-        <div class="project-dialog-heading">
-            <div>
-                <p class="featured-project-kicker">AI student assistant · October 17, 2025</p>
-                <h2 id="sdca-ai-assistant-dialog-title">SDCA AI Assistant</h2>
-            </div>
-            <button type="button" class="project-dialog-close" aria-label="Close project details" data-close-project-details>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
-            </button>
-        </div>
-        <div class="project-dialog-body">
-            <p class="project-dialog-lede">An AI assistant for St. Dominic College of Asia, presented with a secure sign-in screen for access.</p>
-            <div class="project-dialog-grid">
-                <section class="project-dialog-date">
-                    <h3>Project date</h3>
-                    <p>October 17, 2025</p>
-                </section>
-                <section>
-                    <h3>Documented interface</h3>
-                    <p>The provided screen shows an email sign-in page and describes secure access to the AI assistant.</p>
-                </section>
-            </div>
-            <div class="project-video-player">
-                <iframe data-project-video-frame data-video-src="https://drive.google.com/file/d/1tmYsAZiVH88aZRFMkhtsd7uM027ZNXVk/preview" title="SDCA AI Assistant project demonstration" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-                <a class="project-video-fallback" href="https://drive.google.com/file/d/1tmYsAZiVH88aZRFMkhtsd7uM027ZNXVk/view" target="_blank" rel="noopener noreferrer">If the video does not load, watch it on Google Drive.</a>
-            </div>
-        </div>
-    </div>
-</dialog>
-
 <dialog class="project-details-dialog" id="pastoboba-details" aria-labelledby="pastoboba-dialog-title">
     <div class="project-dialog-shell">
         <div class="project-dialog-heading">
@@ -509,7 +486,7 @@
         <div class="project-dialog-heading">
             <div>
                 <p class="featured-project-kicker">Capstone project</p>
-                <h2 id="project-dialog-title">StyleHaiR</h2>
+                <h2 id="project-dialog-title">StyleHaiR: An AI-Driven Augmented Reality Hairstyle Recommendation System</h2>
             </div>
             <button type="button" class="project-dialog-close" aria-label="Close project details" data-close-project-details>
                 <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
@@ -519,24 +496,24 @@
             <p class="project-dialog-lede">An AI-driven augmented reality hairstyle recommendation system focused on hairstyle discovery and customization.</p>
             <div class="project-dialog-grid">
                 <section>
-                    <h3>Project overview</h3>
-                    <p>StyleHaiR explores how AI-assisted recommendations and augmented-reality previews can support a more personalized hairstyle selection experience.</p>
+                    <h3>Project description and objective</h3>
+                    <p>StyleHaiR explores AI-assisted recommendations and augmented-reality previews to support personalized hairstyle discovery and selection.</p>
                 </section>
                 <section>
-                    <h3>Core concepts</h3>
-                    <ul>
-                        <li>AI-assisted hairstyle recommendations</li>
-                        <li>Augmented-reality hairstyle visualization</li>
-                        <li>Hairstyle customization</li>
-                    </ul>
+                    <h3>Technologies and components</h3>
+                    <p>Documented concepts include AI-assisted recommendations and augmented-reality visualization. Specific software frameworks, devices, and IoT components are not documented.</p>
                 </section>
                 <section>
-                    <h3>Presentation recognition</h3>
-                    <p>Presented during the International Student Engagement and Exploration Program at Shenzhen City Polytechnic, China, on May 21, 2026.</p>
+                    <h3>Team members</h3>
+                    <p>Not listed in the available project materials.</p>
                 </section>
                 <section>
-                    <h3>Technical record</h3>
-                    <p>The available project record identifies AI-assisted customization and augmented reality. Specific frameworks, hardware, source code, team details, and individual role are not documented here.</p>
+                    <h3>Your role and contribution</h3>
+                    <p>Not specified in the available project materials.</p>
+                </section>
+                <section>
+                    <h3>Status and presentation</h3>
+                    <p>Research presented at the International Student Engagement and Exploration Program, Shenzhen City Polytechnic, China, on May 21, 2026. Current completion status is not specified.</p>
                 </section>
             </div>
         </div>
@@ -547,7 +524,7 @@
     <div class="project-dialog-shell">
         <div class="project-dialog-heading">
             <div>
-                <p class="featured-project-kicker">Third-Year Capstone · 2026–2027</p>
+                <p class="featured-project-kicker">Web Application Project</p>
                 <h2 id="student-inquiries-dialog-title">An AI Assistant for Student General Inquiries for St. Dominic College of Asia</h2>
             </div>
             <button type="button" class="project-dialog-close" aria-label="Close project details" data-close-project-details>
@@ -570,8 +547,59 @@
                     <p>Capstone 1 and 2</p>
                 </section>
                 <section>
+                    <h3>Project objectives</h3>
+                    <p>Help SDCA students access answers to general college inquiries through an AI assistant.</p>
+                </section>
+                <section>
+                    <h3>Technologies and components</h3>
+                    <p>AI assistant and web application are documented; specific frameworks, models, and infrastructure are not provided.</p>
+                </section>
+                <section>
+                    <h3>Team members</h3>
+                    <p>Not listed in the available project materials.</p>
+                </section>
+                <section>
+                    <h3>Your role and contribution</h3>
+                    <p>Not specified in the available project materials.</p>
+                </section>
+                <section>
+                    <h3>Current status</h3>
+                    <p>Listed as Capstone 1 and 2 for the first semester of third year; the current completion status is not specified.</p>
+                </section>
+                <section>
                     <h3>Project image</h3>
-                    <p>Project image and additional details coming soon.</p>
+                    <p>The slideshow above includes images of the project interface.</p>
+                </section>
+            </div>
+            <div class="project-video-player">
+                <iframe data-project-video-frame data-video-src="https://drive.google.com/file/d/1tmYsAZiVH88aZRFMkhtsd7uM027ZNXVk/preview" title="Student general inquiries AI assistant demonstration" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                <a class="project-video-fallback" href="https://drive.google.com/file/d/1tmYsAZiVH88aZRFMkhtsd7uM027ZNXVk/view" target="_blank" rel="noopener noreferrer">If the video does not load, watch it on Google Drive.</a>
+            </div>
+        </div>
+    </div>
+</dialog>
+
+<dialog class="project-details-dialog" id="capstone-defense-details" aria-labelledby="capstone-defense-dialog-title">
+    <div class="project-dialog-shell">
+        <div class="project-dialog-heading">
+            <div>
+                <p class="featured-project-kicker">Capstone Defense</p>
+                <h2 id="capstone-defense-dialog-title">Capstone Defense Presentation</h2>
+            </div>
+            <button type="button" class="project-dialog-close" aria-label="Close project details" data-close-project-details>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
+            </button>
+        </div>
+        <div class="project-dialog-body">
+            <p class="project-dialog-lede">A capstone defense presentation sharing a project concept, its goals, and the proposed solution to a real-world need.</p>
+            <div class="project-dialog-grid">
+                <section>
+                    <h3>Presentation focus</h3>
+                    <p>Introduce the project idea, explain the need it addresses, and present the proposed solution.</p>
+                </section>
+                <section>
+                    <h3>Defense photos</h3>
+                    <p>The project card above cycles through photos from the capstone defense.</p>
                 </section>
             </div>
         </div>
