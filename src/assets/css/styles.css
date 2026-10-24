@@ -3493,6 +3493,38 @@ section.about.about-premium {
   margin-bottom: 0;
 }
 
+.about-story-photo-gallery {
+  display: grid;
+  margin-top: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.about-story-photo-gallery figure {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(123, 185, 207, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.about-story-photo-gallery img {
+  display: block;
+  width: 100%;
+  height: clamp(150px, 28vw, 250px);
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.about-story-photo-gallery figcaption {
+  padding: 10px 12px;
+  color: rgba(218, 230, 239, 0.76);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
 .about-premium-highlights {
   display: grid;
   margin: 23px 0 0;
@@ -4686,6 +4718,11 @@ body.training-page {
   justify-content: space-between;
   gap: 10px;
   margin-bottom: 22px;
+}
+
+.pastoboba-dialog-date {
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .project-category-badge,
