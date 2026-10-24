@@ -5047,12 +5047,18 @@ body.training-page {
 }
 
 .project-dialog-heading {
+  position: relative;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;
+  padding-right: 42px;
+  padding-left: 42px;
   padding-bottom: 19px;
   border-bottom: 1px solid rgba(145, 178, 196, 0.15);
+}
+
+.project-dialog-heading > div {
+  width: 100%;
+  text-align: center;
 }
 
 .project-dialog-heading h2 {
@@ -5065,6 +5071,9 @@ body.training-page {
 
 .project-dialog-close {
   display: grid;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 36px;
   height: 36px;
   flex: 0 0 36px;
@@ -5084,6 +5093,7 @@ body.training-page {
 
 .project-dialog-body {
   padding-top: 20px;
+  text-align: center;
 }
 
 .project-dialog-lede {
@@ -5104,6 +5114,7 @@ body.training-page {
   border: 1px solid rgba(143, 180, 201, 0.14);
   border-radius: 9px;
   background: rgba(255, 255, 255, 0.025);
+  text-align: center;
 }
 
 .project-dialog-grid h3 {
@@ -5122,7 +5133,8 @@ body.training-page {
 }
 
 .project-dialog-grid ul {
-  padding-left: 17px;
+  padding: 0;
+  list-style-position: inside;
 }
 
 .project-dialog-grid li + li {
