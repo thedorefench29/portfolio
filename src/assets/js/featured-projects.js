@@ -53,9 +53,18 @@
     if (dialog.open) dialog.close();
   }
 
+  function loadProjectVideos(dialog) {
+    dialog.querySelectorAll('[data-project-video-frame]').forEach(frame => {
+      frame.src = frame.dataset.videoSrc;
+    });
+  }
+
   openDetailsButtons.forEach(button => {
     const dialog = document.getElementById(button.dataset.projectDialog);
-    if (dialog) button.addEventListener('click', () => dialog.showModal());
+    if (dialog) button.addEventListener('click', () => {
+      loadProjectVideos(dialog);
+      dialog.showModal();
+    });
   });
 
   closeDetailsButtons.forEach(button => {
@@ -64,7 +73,10 @@
 
   document.querySelectorAll('[data-open-project-video]').forEach(button => {
     button.addEventListener('click', () => {
-      if (videoDialog && !videoDialog.open) videoDialog.showModal();
+      if (videoDialog && !videoDialog.open) {
+        loadProjectVideos(videoDialog);
+        videoDialog.showModal();
+      }
     });
   });
 
@@ -131,6 +143,11 @@
   dialogs.forEach(dialog => {
     dialog.addEventListener('click', event => {
       if (event.target === dialog) closeDialog(dialog);
+    });
+    dialog.addEventListener('close', () => {
+      dialog.querySelectorAll('[data-project-video-frame]').forEach(frame => {
+        frame.removeAttribute('src');
+      });
     });
   });
 

@@ -5022,11 +5022,20 @@ body.training-page {
   background: #000;
 }
 
-.project-video-player video {
+.project-video-player iframe {
   display: block;
   width: 100%;
-  max-height: min(68vh, 680px);
+  height: min(68vh, 680px);
+  min-height: 280px;
+  border: 0;
   background: #000;
+}
+
+.project-video-fallback {
+  display: inline-block;
+  margin: 10px 12px;
+  color: #a8eaf2;
+  font-size: 13px;
 }
 
 .project-details-dialog[open]:not(.is-closing) {
