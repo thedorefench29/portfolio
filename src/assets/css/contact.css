@@ -68,6 +68,7 @@
   border: 3px solid #0b151e;
   border-radius: 50%;
   object-fit: cover;
+  filter: grayscale(100%);
 }
 
 .contact-section .contact-profile-label {

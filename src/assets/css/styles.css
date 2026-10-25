@@ -899,8 +899,8 @@ body{
 
 /*link*/
 
-.youtube::after {
-  content: "YouTube";
+.LinkedIn::after {
+  content: "LinkedIn";
   position: absolute;
   bottom: 125%; /* position above the button */
   left: 50%;
@@ -915,27 +915,7 @@ body{
   transition: opacity 0.3s;
 }
 
-.youtube:hover::after {
-  opacity: 1;
-}
-
-.Instagram::after {
-  content: "Instagram";
-  position: absolute;
-  bottom: 125%; /* position above the button */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  padding: 5px 10px;
-  border-radius: 5px;
-  opacity: 0;
-  white-space: nowrap;
-  pointer-events: none;
-  transition: opacity 0.3s;
-}
-
-.Instagram:hover::after {
+.LinkedIn:hover::after {
   opacity: 1;
 }
 
