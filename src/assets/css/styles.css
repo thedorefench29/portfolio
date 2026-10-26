@@ -709,7 +709,7 @@ html{
 
   .modal-details {
     color: #fff;
-    text-align: left;
+    text-align: center;
   }
 
   .modal-title {
@@ -4478,7 +4478,7 @@ body.training-page {
   align-content: center;
   gap: 4px;
   padding: 11px 18px;
-  text-align: left;
+  text-align: center;
 }
 
 .projects-stats > div + div {

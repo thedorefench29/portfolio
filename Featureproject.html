@@ -365,6 +365,64 @@
             </div>
         </article>
 
+        <article class="featured-project-card project-reveal" data-project-card data-categories="featured mobile-apps" data-focus-areas="barangay-services community-information service-access" data-recognized="false">
+            <figure class="featured-project-cover">
+                <img src="src/assets/media/audrey/project/barangayone/Barangayone.png" alt="BarangayOne project interface">
+                <figcaption>BarangayOne project interface</figcaption>
+            </figure>
+            <div class="featured-project-content">
+                <div class="featured-project-meta">
+                    <span class="project-category-badge">Community Services / Mobile Application</span>
+                    <span class="project-status"><span aria-hidden="true"></span>Project showcase</span>
+                </div>
+                <p class="featured-project-kicker">Mobile application project</p>
+                <h2><button type="button" class="featured-project-title-button" data-open-project-details data-project-dialog="barangayone-details">BarangayOne</button></h2>
+                <p class="featured-project-summary">BarangayOne is a mobile application that brings essential community information and barangay services together for residents.</p>
+
+                <div class="project-focus-list" aria-label="Project focus areas">
+                    <span>Barangay services</span>
+                    <span>Community information</span>
+                    <span>Resident access</span>
+                </div>
+
+                <div class="featured-project-actions">
+                    <button type="button" class="project-details-button" data-open-project-details data-project-dialog="barangayone-details">
+                        View Details
+                        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5"/></svg>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article class="featured-project-card project-reveal" data-project-card data-categories="featured mobile-apps" data-focus-areas="accessible-information disability-awareness community-resource" data-recognized="false">
+            <figure class="featured-project-cover">
+                <img src="src/assets/media/audrey/project/Pwd%20Booklet/PWD%20Booklet.png" alt="PWD Booklet cover and pages">
+                <figcaption>PWD Booklet</figcaption>
+            </figure>
+            <div class="featured-project-content">
+                <div class="featured-project-meta">
+                    <span class="project-category-badge">Accessibility / Mobile Application</span>
+                    <span class="project-status"><span aria-hidden="true"></span>Project showcase</span>
+                </div>
+                <p class="featured-project-kicker">Mobile application project</p>
+                <h2><button type="button" class="featured-project-title-button" data-open-project-details data-project-dialog="pwd-booklet-details">PWD Booklet</button></h2>
+                <p class="featured-project-summary">The PWD Booklet is a mobile application that presents helpful information for persons with disabilities as a clear, accessible community resource.</p>
+
+                <div class="project-focus-list" aria-label="Project focus areas">
+                    <span>Accessible information</span>
+                    <span>Disability awareness</span>
+                    <span>Community resource</span>
+                </div>
+
+                <div class="featured-project-actions">
+                    <button type="button" class="project-details-button" data-open-project-details data-project-dialog="pwd-booklet-details">
+                        View Details
+                        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5"/></svg>
+                    </button>
+                </div>
+            </div>
+        </article>
+
     </section>
 
 </main>
@@ -601,6 +659,68 @@
                     <h3>Defense photos</h3>
                     <p>The project card above cycles through photos from the capstone defense.</p>
                 </section>
+            </div>
+        </div>
+    </div>
+</dialog>
+
+<dialog class="project-details-dialog" id="barangayone-details" aria-labelledby="barangayone-dialog-title">
+    <div class="project-dialog-shell">
+        <div class="project-dialog-heading">
+            <div>
+                <p class="featured-project-kicker">Mobile application project</p>
+                <h2 id="barangayone-dialog-title">BarangayOne</h2>
+            </div>
+            <button type="button" class="project-dialog-close" aria-label="Close project details" data-close-project-details>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
+            </button>
+        </div>
+        <div class="project-dialog-body">
+            <p class="project-dialog-lede">BarangayOne is a mobile application that brings essential community information and barangay services together for residents.</p>
+            <div class="project-dialog-grid">
+                <section>
+                    <h3>Project idea</h3>
+                    <p>Make local information and services easier for residents to find through a single community-focused platform.</p>
+                </section>
+                <section>
+                    <h3>Project showcase</h3>
+                    <p>Watch the BarangayOne project video on Google Drive.</p>
+                </section>
+            </div>
+            <div class="project-video-player">
+                <iframe data-project-video-frame data-video-src="https://drive.google.com/file/d/1SWtAFmcNsp1hg91lR737DXGA7xDHM7wO/preview" title="BarangayOne project video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                <a class="project-video-fallback" href="https://drive.google.com/file/d/1SWtAFmcNsp1hg91lR737DXGA7xDHM7wO/view" target="_blank" rel="noopener noreferrer">If the video does not load, watch it on Google Drive.</a>
+            </div>
+        </div>
+    </div>
+</dialog>
+
+<dialog class="project-details-dialog" id="pwd-booklet-details" aria-labelledby="pwd-booklet-dialog-title">
+    <div class="project-dialog-shell">
+        <div class="project-dialog-heading">
+            <div>
+                <p class="featured-project-kicker">Mobile application project</p>
+                <h2 id="pwd-booklet-dialog-title">PWD Booklet</h2>
+            </div>
+            <button type="button" class="project-dialog-close" aria-label="Close project details" data-close-project-details>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
+            </button>
+        </div>
+        <div class="project-dialog-body">
+            <p class="project-dialog-lede">The PWD Booklet is a mobile application that presents helpful information for persons with disabilities as a clear, accessible community resource.</p>
+            <div class="project-dialog-grid">
+                <section>
+                    <h3>Project idea</h3>
+                    <p>Present useful information for persons with disabilities in a resource that is easy to read, understand, and share.</p>
+                </section>
+                <section>
+                    <h3>Project material</h3>
+                    <p>View the PWD Booklet project material on Google Drive.</p>
+                </section>
+            </div>
+            <div class="project-video-player">
+                <iframe data-project-video-frame data-video-src="https://drive.google.com/file/d/13a6YREBzJ4wmlLaeHT2w8bqfnZdVD064/preview" title="PWD Booklet project material" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                <a class="project-video-fallback" href="https://drive.google.com/file/d/13a6YREBzJ4wmlLaeHT2w8bqfnZdVD064/view" target="_blank" rel="noopener noreferrer">If the material does not load, open it on Google Drive.</a>
             </div>
         </div>
     </div>
